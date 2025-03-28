@@ -1,0 +1,241 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(36, 36, 36, 0.8);
+    width: 100%;
+    max-width: 1082px;
+    height: 67px;
+    border-radius: 50px;
+    top: 20px;
+    position: absolute;
+    z-index: 99;
+    border: none;
+    align-self: center;
+}
+
+.nav-list{
+    padding: 0;
+    margin: 20px 30px;
+    list-style: none;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+}
+
+.nav-anchor{
+    text-decoration: none;
+    color: #F6F6F6;
+    transition-duration: 0.2s;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: auto;
+}
+
+.nav-anchor:hover{
+    color: #69BE31;
+    transition-duration: 0.2s;
+}
+
+.header-callback-container{
+    display: none;
+}
+
+.nav-item-footer{
+    display: none;
+}
+
+.header-close-img{
+    display: none;
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    transition-duration: 0.2s;
+}
+
+.header-close-img:hover{
+    transition-duration: 0.2s;
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width: 1440px) {
+    .header{
+        display: none;
+        width: 320px;
+        right: 0;
+        top: 0;
+        height: auto;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin: 73px 20px 25px;
+    }
+
+    .nav-anchor{
+        font-size: 16px;
+    }
+
+    .header-callback-container{
+        width: 100%;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-callback-btn{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% - 40px);
+        background-color: #69BE31;
+        color: #111111;
+        border-radius: 50px;
+        height: 42px;
+        border: none;
+    }
+
+    .header-link-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-callback-links{
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+        justify-content: start;
+        margin-left: 20px;
+    }
+
+    .header-callback-img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-copyright{
+        color: #f6f6f6;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-family: "Manrope", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: auto;
+    }
+
+    .nav-item-footer{
+        display: block;
+        width: 50%;
+    }
+
+    .header-close-img{
+        display: block;
+        position: absolute;
+        top: 45px;
+        right: 30px;
+    }
+}
+
+.blog-nav-link-hide{
+    display: none;
+}
+
+@media screen and (max-width: 833px) {
+    .header{
+        width: 335px;
+        right: 20px;
+        left: 20px;
+        background-color: rgba(36, 36, 36, 1);
+        border-radius: 40px;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin: 73px 20px 25px;
+    }
+
+    .nav-anchor{
+        font-size: 16px;
+    }
+
+    .header-callback-container{
+        width: 100%;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-callback-btn{
+        width: calc(100% - 40px);
+        background-color: #69BE31;
+        color: #111111;
+        border-radius: 50px;
+        height: 42px;
+        border: none;
+    }
+
+    .header-link-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-callback-links{
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+        justify-content: start;
+        margin-left: 20px;
+    }
+
+    .header-callback-img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-copyright{
+        color: #f6f6f6;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-family: "Manrope", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: auto;
+    }
+
+    .nav-item-footer{
+        display: block;
+        width: 50%;
+    }
+
+    .header-close-img{
+        display: block;
+        position: absolute;
+        top: 45px;
+        right: 30px;
+    }
+}

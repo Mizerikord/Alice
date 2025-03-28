@@ -1,0 +1,18 @@
+.page{
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: center;
+}
+
+.section-title {
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 64px;
+  line-height: auto;
+  font-weight: 700;
+  color: #f6f6f6;
+}

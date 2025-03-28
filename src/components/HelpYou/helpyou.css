@@ -1,0 +1,263 @@
+.help-you {
+  width: 1440px;
+  background-color: #111111;
+}
+
+.section-title {
+  margin: 100px 100px 50px 100px;
+}
+
+.help-container {
+  margin: 220px 100px 0;
+}
+
+.demeanor-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  grid-gap: 40px;
+}
+
+.demeanor-monitor {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 600px;
+  height: 288px;
+  border: none;
+  border-radius: 50px;
+  outline: 3px solid #69be31;
+}
+
+.demeanor-item{
+  align-items: flex-end;
+  width: 280px;
+  height: 124px;
+  border: none;
+}
+
+.demeanor-monitor > .demeanor-title {
+  font-size: 24px;
+  text-align: right;
+  margin: 30px;
+  width: 60%;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.demeanor-monitor > .demeanor-img {
+  position: absolute;
+  display: block;
+}
+
+.demeanor-monitor > .demeanor-text {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin: 0 30px 30px;
+}
+
+.help-slider {
+  display: none;
+}
+
+.demeanor-range {
+  display: none;
+}
+
+.demeanor-range-position{
+  width: 68px;
+  color: #f6f6f6;
+  text-wrap: none;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1440px) {
+  .help-you {
+    width: 834px;
+    background-color: #111111;
+  }
+
+  .section-title {
+    margin: 100px 100px 50px 100px;
+  }
+
+  .help-container {
+    margin: 220px 40px 0;
+  }
+
+  .demeanor-list {
+    grid-template-columns: 238px 238px 238px;
+    grid-template-rows: 1fr 124px 124px 124px;
+    grid-gap: 20px;
+    justify-items: center;
+  }
+
+  .demeanor-monitor {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-bottom: 30px;
+  }
+
+  .demeanor-item{
+    width: 238px;
+    height: 124px;
+  }
+}
+
+@media screen and (max-width: 833px) {
+  .help-you {
+    width: 375px;
+  }
+
+  .section-title {
+    margin: 80px 16px 35px;
+  }
+
+  .help-container {
+    margin: 35px 16px 0;
+  }
+
+  .demeanor-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .demeanor-monitor {
+    width: 325px;
+    height: 224px;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 209px 25px 20px;
+    background-color: rgba(36, 36, 36, 0.8);
+    border-radius: 40px;
+  }
+
+  .demeanor-monitor > .demeanor-title {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0 0;
+    width: 95%;
+  }
+
+  .demeanor-monitor > .demeanor-img {
+    display: block;
+  }
+
+  .demeanor-monitor > .demeanor-text {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0;
+    width: 95%;
+  }
+
+  .help-slider {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+
+  .help-slider-arrow {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: rgba(36, 36, 36, 0.8);
+  }
+
+  .help-slider-right{
+    transform: rotate(180deg);
+  }
+
+  .demeanor-item-slider {
+    width: 210px;
+    height: 64px;
+    outline: 2px solid #69be31;
+    border-radius: 50px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .help-slider-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+  }
+
+  .help-slider-arrow:hover {
+    background-color: #69be31;
+    transition-duration: 0.2s;
+  }
+
+  .help-slider-righ {
+    transform: rotate(180deg);
+  }
+
+  .help-slider-img {
+    margin-right: 4px;
+  }
+
+  .demeanor-item-slider{
+    color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: auto;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+
+  .demeanor-range {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    height: 27px;
+  }
+
+  .demeanor-range-line {
+    width: 100%;
+    height: 9px;
+  }
+
+  .demeanor-range-line {
+    accent-color: #69be31;
+    background-color: rgba(36, 36, 36, 0.8);
+    height: 9px;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .demeanor-range-line-position {
+    height: 9px;
+    background-color: #69be31
+  }
+}

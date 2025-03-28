@@ -1,0 +1,225 @@
+.contacts {
+  width: 1440px;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url(../../media/caracal.png);
+  background-size: 1046px 1086px;
+  background-repeat: no-repeat;
+  background-position: 31px 0;
+  overflow: hidden;
+}
+
+.contacts-title {
+  align-self: start;
+  margin: 32px 100px 50px;
+}
+
+.contacts-data-container {
+  width: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.contact-links-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-icon {
+  width: 56px;
+  height: 56px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 31px;
+  text-decoration: none;
+}
+
+.contact-text {
+  color: #f6f6f6;
+  text-decoration: none;
+  margin: 0;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.contact-tlg-msg {
+  width: 50%;
+  color: #f6f6f6;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.telegramm-link {
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 700;
+  color: #f6f6f6;
+  text-decoration: none;
+}
+
+.contact-tlg-keyword {
+  color: #69be31;
+}
+
+.contact-tlg-msg-description {
+  width: 50%;
+  color: #f6f6f6;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-align: right;
+  margin-bottom: 50px;
+}
+
+.telegramm-subscribe {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 73px;
+  border-radius: 100px;
+  background-color: rgba(36, 36, 36, 0.8);
+  border: none;
+  outline: 2px solid #69be31;
+  color: #69be31;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  font-weight: 400;
+  transition-duration: 0.2s;
+  margin-bottom: 150px;
+}
+
+.telegramm-subscribe:hover {
+  background-color: #69be31;
+  border: none;
+  outline: 2px solid #69be31;
+  color: #111111;
+  transition-duration: 0.2s;
+}
+
+@media screen and (max-width: 1440px) {
+  .contacts {
+    width: 834px;
+    background-size: 852px 902px;
+    background-position: -265px 0;
+  }
+
+  .contacts-title {
+    margin: 84px 40px 40px;
+  }
+
+  .contacts-data-container {
+    width: calc(100% - 80px);
+  }
+
+  .contact-links-list {
+    gap: 20px;
+  }
+
+  .contact-link {
+    gap: 30px;
+  }
+
+  .contact-tlg-msg {
+    width: 75%;
+    font-size: 32px;
+    text-align: right;
+  }
+
+  .telegramm-link {
+    font-size: 32px;
+  }
+
+  .contact-tlg-msg-description {
+    width: 75%;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .telegramm-subscribe {
+    width: 75%;
+    height: 67px;
+    font-size: 20px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 833px) {
+  .contacts {
+    width: 375px;
+    background-size: 515px 545px;
+    background-position: -160px 0;
+  }
+
+  .contacts-title {
+    align-self: start;
+    margin: 80px 20px 40px;
+  }
+
+  .contacts-data-container {
+    width: calc(100% - 40px);
+  }
+
+  .contact-links-list {
+    gap: 20px;
+  }
+
+  .contact-link {
+    gap: 10px;
+  }
+
+  .contact-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-text {
+    font-size: 16px;
+  }
+
+  .contact-tlg-msg {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .telegramm-link {
+    font-size: 18px;
+  }
+
+  .contact-tlg-msg-description {
+    width: 90%;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .telegramm-subscribe {
+    width: 100%;
+    height: 62px;
+    font-size: 16px;
+    margin-bottom: 100px;
+  }
+}

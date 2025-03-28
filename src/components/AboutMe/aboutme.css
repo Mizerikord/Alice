@@ -1,0 +1,211 @@
+.about-me {
+  width: 1440px;
+  background-image: url(../../media/ФОН_КОШКА.png);
+  background-position: bottom right;
+  background-size: 756px 1096px;
+  background-repeat: no-repeat;
+  background-color: #111111;
+}
+
+.section-title {
+  margin: 100px 100px 50px 100px;
+}
+
+.about-owner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.owner-description{
+  position: relative;
+  height: 761px;
+}
+
+.owner-img {
+  width: 600px;
+  height: 761px;
+  border-radius: 50px;
+  position: absolute;
+  left: 0;
+}
+
+.about-description {
+  margin: auto 100px;
+}
+
+.owner-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.owner-info-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  width: 49%;
+}
+
+.owner-title {
+  color: #f6f6f6;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: auto;
+  width: 590px;
+  text-align: right;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.owner-info {
+  color: #f6f6f6;
+  text-align: right;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  margin: 0;
+}
+
+.advantage {
+  margin: 0 100px 30px;
+  overflow-x: scroll;
+}
+
+.advantage-title {
+  color: #f6f6f6;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: auto;
+}
+
+.advantage-list{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+    width: fit-content;
+    margin: 0;
+}
+
+.advantage::-webkit-scrollbar {
+  height: 10px;
+  border-radius: 10px;
+}
+
+.advantage::-webkit-scrollbar-thumb{
+  background-color: #69BE31;
+  border-radius: 10px;
+}
+
+.advantage::-webkit-scrollbar-track {
+  background-color: rgba(36, 36, 36, 0.8);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1440px) {
+  .about-me {
+    width: 834px;
+    background-image: none;
+    background-color: #111111;
+  }
+  
+  .section-title {
+    margin: 40px;
+  }
+  
+  .about-owner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .owner-description{
+    position: static;
+    height: auto;
+  }
+  
+  .owner-img {
+    width: 100%;
+    object-fit: cover;
+    position: static;
+  }
+  
+  .about-description {
+    margin: auto 40px;
+  }
+  
+  .owner-info-list {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .owner-title {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .owner-info {
+    text-align: left;
+  }
+  
+  .advantage {
+    margin: 0 40px 30px;
+  }
+}
+
+@media screen and (max-width: 833px) {
+  .about-me {
+    width: 375px;
+  }
+  
+  .section-title {
+    margin: 25px 25px 40px 25px;
+    font-size: 32px;
+  }
+
+  .owner-title {
+    font-size: 24px;
+  }
+  
+  .about-owner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+  }
+  
+  .owner-img {
+    height: 420px;
+    border-radius: 40px;
+  }
+  
+  .about-description {
+    margin: auto 25px 34px;
+  }
+  
+  .owner-info {
+    font-size: 16px;
+  }
+  
+  .advantage {
+    margin: 0 25px 30px;
+    overflow-x: scroll;
+  }
+  
+  .advantage-title {
+    font-size: 24px;
+  }
+  
+  .advantage-list{
+      gap: 20px;
+  }
+}

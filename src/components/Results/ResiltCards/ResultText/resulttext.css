@@ -1,0 +1,69 @@
+.result-paragraph-subtitle {
+  color: #f6f6f6;
+  margin: 0;
+  margin-top: 20px;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: auto;
+  font-weight: 400;
+}
+
+.result-text-list {
+  display: block;
+  list-style-type: disc;
+  color: #f6f6f6;
+  padding: 0;
+  margin: 10px 20px 0 20px;
+}
+
+.result-text {
+  color: #f6f6f6;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media screen and (max-width: 1440px) {
+  .result-paragraph-subtitle {
+    margin-top: 30px;
+  }
+
+  .result-text-list {
+    margin: 10px 0 0 30px;
+  }
+}
+
+@media screen and (max-width: 833px) {
+  .result-paragraph-subtitle {
+    font-size: 20px;
+  }
+
+  .result-text-list:nth-child(n+3) {
+    margin: 10px 25px 0 20px;
+    display: none;
+  }
+
+  .result-text {
+    font-size: 16px;
+    line-height: auto;
+  }
+
+  .result-paragraph-subtitle {
+    display: none;
+  }
+
+  .result-paragraph .result-text-list:first-child {
+    display: block;
+  }
+
+  .result-paragraph-subtitle:first-child {
+    display: flex;
+  }
+
+  .result-paragraph{
+    margin-bottom: 20px;
+  }
+}

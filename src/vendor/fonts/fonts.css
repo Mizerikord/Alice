@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'ArsenalSC';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("ArsenalSC-Regular.woff") format("woff"),
+  url("ArsenalSC-Regular.woff2") format("woff2")
+} 
+
+@font-face {
+  font-family: 'ArsenalSC';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("ArsenalSC-Bold.woff") format("woff"), 
+  url("ArsenalSC-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Manrope';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("Manrope-Medium.woff") format("woff"), 
+  url("Manrope-Medium.woff2") format("woff2");
+} 
+
+@font-face {
+  font-family: 'Manrope';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("Manrope-Regular.woff") format("woff"), 
+  url("Manrope-Regular.woff2") format("woff2");
+} 

@@ -1,0 +1,208 @@
+.main {
+    /* width: 100%; */
+    width: 1440px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-image: url(../../../media/камень.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+    position: relative;
+    padding-bottom: 160px;
+  }
+  
+  .main-container {
+    width: 100%;
+    height: 100%;
+    margin-right: 48px;
+  }
+  
+  .video-background {
+    width: 1440px;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .main-title {
+    color: #f6f6f6;
+    margin: 137px 0 30px 0;
+    text-align: right;
+    font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+    font-size: 96px;
+    line-height: 90%;
+    letter-spacing: normal;
+  }
+  
+  .main-container {
+    z-index: 1;
+    position: absolute;
+    margin-right: 84px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .main-subtitle {
+    color: #f6f6f6;
+    text-align: right;
+    font-size: 24px;
+    margin: 0 0 246px;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    letter-spacing: 0;
+    line-height: auto;
+    font-weight: 400;
+    width: 436px;
+  }
+  
+  .main-subscribe-btn {
+    width: 387px;
+    height: 73px;
+    border-radius: 100px;
+    background-color: #69be31;
+    text-align: center;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -2%;
+    border: none;
+    color: #111111;
+    padding: auto 32px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: 0.2s;
+  }
+
+  .main-subscribe-btn:hover {
+    box-shadow: 0 0 20px #69be31;
+    text-decoration: 0.2s;
+  }
+  
+  .menu-burger {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    margin-top: -5px;
+    list-style-type: none;
+    z-index: 99;
+    overflow: hidden;
+  }
+  
+  .menu-line {
+    width: 100%;
+    height: 6px;
+    border-bottom: 3px solid #f6f6f6;
+    transition-duration: 0.2s;
+    z-index: 1;
+  }
+  
+  .menu-burger:hover > .menu-line {
+    border-bottom: 3px solid #69be31;
+    transition-duration: 0.2s;
+  }
+  
+  .menu-line:first-child {
+    height: 3px;
+  }
+  
+  @media screen and (max-width: 1440px) {
+    .main {
+      width: 834px;
+      overflow: hidden;
+      padding-bottom: 160px;
+      background-size: 1440px auto;
+    }
+  
+    .main-subtitle {
+      margin: 0 0 264px;
+      width: 460px;
+    }
+  
+    .menu-burger {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .video-background {
+      width: 1440px;
+      align-self: center;
+      height: auto;
+    }
+  
+    .main-container {
+      margin-right: 40px;
+    }
+  
+    .main-subscribe-btn {
+      width: 387px;
+      height: 73px;
+      border-radius: 100px;
+      background-color: #69be31;
+      text-align: center;
+      font-family: "Manrope", Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: -2%;
+      border: none;
+      color: #111111;
+      padding: auto 32px;
+    }
+  }
+  
+  @media screen and (max-width: 833px) {
+    .main {
+      width: 375px;
+      align-items: center;
+  
+      padding-bottom: 110px;
+      /* qwe */
+  
+      background-size: 986.12px 389.65px;
+    }
+  
+    .main-container {
+      align-items: center;
+    }
+  
+    .main-title {
+      margin: 100px 0 20px 0;
+      font-size: 56px;
+    }
+  
+    .main-subtitle {
+      font-size: 16px;
+      margin: 0 0 260px;
+      width: 300px;
+    }
+  
+    .video-background {
+      width: 988px;
+      height: 554px;
+    }
+  
+    .main-container {
+      margin-right: auto;
+    }
+  
+    .main-subscribe-btn {
+      width: 325px;
+      height: 62px;
+      border-radius: 100px;
+      background-color: #69be31;
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: -2%;
+      padding: auto 32px;
+    }
+  }
+  

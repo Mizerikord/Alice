@@ -1,0 +1,101 @@
+.demeanor-item {
+  background-color: rgba(36, 36, 36, 0.8);
+  border: none;
+  border-radius: 40px;
+  transition-duration: 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.demeanor-title {
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  margin: 0 20px;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  font-weight: 500;
+  color: #f6f6f6;
+}
+
+
+
+.demeanor-text {
+  color: #f6f6f6;
+  display: none;
+  width: 63%;
+  z-index: 1;
+  text-align: right;
+  margin: 30px;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  font-weight: 400;
+}
+
+.demeanor-item:hover {
+  border: none;
+  outline: 2px solid #69be31;
+  transition-duration: 0.2s;
+}
+
+.demeanor-img {
+  display: none;
+  position: absolute;
+  bottom: 5px;
+  left: -90px;
+}
+
+@media screen and (max-width: 1440px) {
+  .demeanor-title {
+    width: 95%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 833px) {
+  .demeanor-item {
+    border-radius: 50px;
+    display: none;
+  }
+  
+  .demeanor-title {
+    width: 95%;
+    margin: 0;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: auto;
+    font-weight: 500;
+    color: #f6f6f6;
+  }
+  
+  
+  .demeanor-text {
+    color: #f6f6f6;
+    display: none;
+    width: 63%;
+    z-index: 1;
+    text-align: right;
+    margin: 30px;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: auto;
+    font-weight: 400;
+  }
+  
+
+
+
+  .demeanor-img {
+    width: auto;
+    height: 223px;
+    top: -85%;
+    bottom: auto;
+    left: auto;
+  }
+}

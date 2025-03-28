@@ -1,0 +1,141 @@
+.weblog {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  background-color: #111111;
+  background-image: url(../../media/serval-blog-bgi.png);
+  background-repeat: no-repeat;
+  background-size: 1440px 768px;
+  width: 1440px;
+}
+
+.weblog-nav {
+  margin: 137px 100px 40px;
+}
+
+.weblog-nav-sting {
+  color: #f6f6f6;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.weblog-link-current {
+  font-weight: 700;
+}
+
+.weblog-link {
+  text-decoration: none;
+  color: #f6f6f6;
+  margin: 0 5px;
+}
+
+.weblog-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.weblog-title {
+  color: #f6f6f6;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 96px;
+  line-height: 90%;
+  letter-spacing: 0;
+  font-weight: 700;
+  margin: 0 100px 20px;
+  width: 50%;
+}
+
+.weblog-subtitle {
+  color: #f6f6f6;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 700;
+  margin: 0 100px 20px;
+  width: 33%;
+}
+
+.weblog-text {
+  color: #f6f6f6;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 500;
+  margin: 0 100px 94px;
+  width: 40%;
+}
+
+@media screen and (max-width: 1440px) {
+  .weblog {
+    width: 834px;
+    background-size: 834px 1152px;
+    background-image: url(../../media/serval-bgi-834.png);
+    background-position: 0 0;
+  }
+
+  .weblog-nav {
+    margin: 128px 40px 20px;
+  }
+
+  .weblog-nav-sting {
+    font-size: 20px;
+  }
+
+  .weblog-title {
+    margin: 0 40px 330px;
+    width: 70%;
+  }
+
+  .weblog-subtitle {
+    margin: 0 40px 20px;
+    width: 55%;
+  }
+
+  .weblog-text {
+    margin: 0 40px 170px;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 833px) {
+  .weblog {
+    background-image: url(../../media/serval-bgi-375.png);
+    background-size: contain;
+    background-position: 0 0;
+    width: 375px;
+  }
+
+  .weblog-nav {
+    margin: 100px 25px 40px;
+  }
+
+  .weblog-nav-sting {
+    font-size: 16px;
+  }
+
+  .weblog-title {
+    font-size: 48px;
+    margin: 0 25px 169px;
+    width: 70%;
+  }
+
+  .weblog-subtitle {
+    font-size: 32px;
+    margin: 0 25px 20px;
+    width: 80%;
+  }
+
+  .weblog-text {
+    font-size: 16px;
+    margin: 0 25px 40px;
+    width: 90%;
+  }
+}

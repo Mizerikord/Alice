@@ -1,0 +1,334 @@
+.services {
+  width: 1440px;
+  background-color: #111111;
+  background-image: url(../../media/background_wool.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1440px 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-title {
+  align-self: start;
+}
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.services-list {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+}
+
+.services-item {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.offers {
+  outline: 2px solid #69be31;
+  border-radius: 50px;
+  border: none;
+  width: 387px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-basis: 0;
+  background-color: rgba(36, 36, 36, 0.8);
+  position: relative;
+}
+
+.offers-text-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offers-pay-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.offer-title {
+  color: #69be31;
+  text-align: center;
+  margin: 30px;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: auto;
+  font-weight: 700;
+}
+
+.offer-text {
+  color: #f6f6f6;
+  margin: 0 28px 30px;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  font-weight: 400;
+}
+.offer-pay {
+  width: 100%;
+  margin-bottom: 30px;
+  color: #f6f6f6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer-duration {
+  margin: 0;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: auto;
+  font-weight: 500;
+}
+
+.offer-duration:first-child {
+  margin-left: 28px;
+}
+
+.offer-duration:last-child {
+  margin-right: 28px;
+}
+
+.offer-cost {
+  color: #69be31;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: auto;
+  font-weight: 700;
+  margin: 0 0 70px;
+}
+
+.sign-btn {
+  background-color: #69be31;
+  width: 387px;
+  height: 73px;
+  border-radius: 100px;
+  color: #111111;
+  border: none;
+  box-sizing: border-box;
+  transition-duration: 0.2s;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.offer-location {
+  margin: 0;
+  position: absolute;
+  bottom: 30px;
+  color: #f6f6f6;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: auto;
+  font-weight: 400;
+  margin: 0 28px;
+}
+
+.sign-btn:hover {
+  box-shadow: 0 0 30px #69be31;
+  transition-duration: 0.2s;
+}
+
+@media screen and (max-width: 1440px) {
+  .services {
+    width: 834px;
+    background-image: none;
+  }
+
+  .services-title{
+    font-size: 64px;
+    margin: 100px 40px 40px;
+  }
+  
+  .services-container {
+    width: 100%;
+    max-width: 834px;
+  }
+  
+  .services-list {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .services-item {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .offers {
+    width: 238px;
+    margin: 0;
+  }
+
+  .offers-text-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .offers-pay-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .offer-title {
+    text-align: center;
+    margin: 20px 20px 40px;
+    font-size: 20px;
+  }
+  
+  .offer-text {
+    margin: 0 20px 30px;
+    font-size: 16px;
+  }
+  .offer-pay {
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .offer-duration-text{
+    display: none;
+  }
+  
+  .offer-duration:first-child {
+    margin-left: 20px;
+  }
+  
+  .offer-duration:last-child {
+    margin-right: 20px;
+  }
+  
+  .offer-cost {
+    color: #69be31;
+    margin: 0 0 78px;
+  }
+  
+  .sign-btn {
+    width: 238px;
+    height: 67px;
+  }
+  
+  .offer-location {
+    bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 20px;
+  }
+  
+  .sign-btn:hover {
+    box-shadow: 0 0 20px #69be31;
+  }
+}
+
+@media screen and (max-width: 833px) {
+  .services {
+    width: 375px;
+  }
+
+  .services-title{
+    font-size: 32px;
+    margin: 80px 25px 40px;
+  }
+  
+  .services-container {
+    width: 100%;
+    max-width: 375px;
+  }
+  
+  .services-list {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+  }
+
+  .services-item {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .offers {
+    width: 325px;
+    margin: 0;
+  }
+
+  .offer-pay{
+    position: static;
+  }
+  
+  .offer-title {
+    margin: 20px 20px 20px;
+    font-size: 24px;
+  }
+  
+  .offer-text {
+    margin: 0 20px 20px;
+  }
+  
+  .offer-cost {
+    color: #69be31;
+    margin: 0 0 9px;
+  }
+  
+  .sign-btn {
+    width: 325px;
+    height: 67px;
+    font-size: 16px;
+  }
+  
+  .offer-location {
+    position: static;
+    bottom: 0;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 20px 9px;
+  }
+  
+  .sign-btn:hover {
+    box-shadow: 0 0 20px #69be31;
+  }
+}

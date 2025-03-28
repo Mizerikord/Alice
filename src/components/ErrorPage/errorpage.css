@@ -1,0 +1,149 @@
+.error-page {
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #111111;
+}
+
+.error-page-container {
+  width: 1240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.article-nav-error {
+  margin: 137px 0 20px;
+  align-self: start;
+}
+
+.error-page-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.error-page-title {
+  color: #f6f6f6;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.error-page-img {
+  width: 721px;
+  height: 359px;
+  margin-bottom: 20px;
+}
+
+.error-page-text {
+  width: 60%;
+  color: #f6f6f6;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.error-page-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 50%;
+  height: 73px;
+  border: none;
+  outline: 2px solid #69be31;
+  border-radius: 50px;
+  color: #69be31;
+  background-color: rgba(36, 36, 36, 0.8);
+  margin-bottom: 150px;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: auto;
+  letter-spacing: 0;
+  transition-duration: 0.2s;
+}
+
+.error-page-link:hover {
+  color: #111111;
+  background-color: #69be31;
+  box-shadow: 0 0 20px #69be31;
+  transition-duration: 0.2s;
+}
+
+@media screen and (max-width: 1440px) {
+  .error-page {
+    width: 834px;
+  }
+
+  .error-page-container {
+    width: 754px;
+  }
+
+  .article-nav-error {
+    margin: 130px 0 20px;
+  }
+
+  .error-page-title {
+    font-size: 36px;
+  }
+
+  .error-page-text {
+    width: 75%;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .error-page-link {
+    width: 75%;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 833px) {
+    .error-page {
+        width: 375px;
+      }
+    
+      .error-page-container {
+        width: 325px;
+      }
+    
+      .article-nav-error {
+        margin: 100px 0 20px;
+      }
+    
+      .error-page-title {
+        font-size: 24px;
+      }
+    
+      .error-page-img {
+        width: 325px;
+        height: 162px;
+      }
+    
+      .error-page-text {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+    
+      .error-page-link {
+        width: 100%;
+        height: 62px;
+        margin-bottom: 80px;
+        font-size: 16px;
+      }
+}

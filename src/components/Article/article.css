@@ -1,0 +1,366 @@
+.article {
+  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #111111;
+}
+
+.article-main-container {
+  width: 1240px;
+}
+
+.article-nav {
+  margin: 137px 0 20px;
+}
+
+.article-nav-sting {
+  color: #f6f6f6;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.article-link-current {
+  font-weight: 700;
+}
+
+.article-link {
+  text-decoration: none;
+  color: #f6f6f6;
+  margin: 0 5px;
+}
+
+.article-img-container {
+  max-width: 1240px;
+  max-height: 424px;
+  border-radius: 50px;
+  border: none;
+}
+
+.article-title {
+  color: #69be31;
+  text-align: center;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 64px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.article-data-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.article-data-day {
+  width: 100%;
+  color: #f6f6f6;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.article-data {
+  text-wrap: wrap;
+  width: 100%;
+  color: #f6f6f6;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin: 0;
+}
+
+.article-consult-text {
+  color: #69be31;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.article-consult-btn {
+  width: 50%;
+  align-self: start;
+  height: 67px;
+  background-color: #69be31;
+  color: #111111;
+  border: none;
+  border-radius: 100px;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.article-cards-subtitle {
+  align-self: start;
+  color: #f6f6f6;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.article-data-list {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-flow: column;
+  grid-gap: 143px 40px;
+  margin-bottom: 30px;
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.article-data-list::-webkit-scrollbar {
+  width: 500px;
+  height: 9px;
+  background-color: rgba(36, 36, 36, 0.8);
+  border-radius: 5px;
+}
+
+.article-data-list::-webkit-scrollbar-button:horizontal:end {
+width: 90px;
+background-color: #111111
+}
+.article-data-list::-webkit-scrollbar-button:horizontal:start {
+  display: none;
+}
+
+.article-data-list::-webkit-scrollbar-thumb {
+  height: 9px;
+  background-color: #69be31;
+  border-radius: 5px;
+}
+
+.article-cards-data-container:first-child {
+  margin-left: 1px;
+}
+
+.article-cards-slider-position {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  z-index: 99;
+  position: absolute;
+  bottom: 7px;
+  right: 0;
+}
+
+.article-cards-slider-arrows-container {
+  width: 126px;
+  height: 53px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.article-slider-arrow-container {
+  width: 53px;
+  height: 53px;
+  background-color: rgba(36, 36, 36, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.2s;
+}
+
+.article-cards-slider-arrow {
+  width: 29px;
+  height: 29px;
+}
+
+.article-arrow-right {
+  margin-left: 3px;
+  transform: rotate(180deg);
+}
+
+.article-arrow-left {
+  margin-right: 3px;
+}
+
+.article-slider-arrow-container:hover {
+  transition-duration: 0.2s;
+  background-color: #69be31;
+}
+
+@media screen and (max-width: 1440px) {
+  .article {
+    width: 834px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #111111;
+  }
+
+  .article-main-container {
+    width: 754px;
+  }
+
+  .article-nav {
+    margin: 130px 0 20px;
+  }
+
+  .article-nav-sting {
+    font-size: 20px;
+  }
+
+  .article-link-current {
+    font-weight: 700;
+  }
+
+  .article-img-container {
+    width: 100%;
+    max-width: 754px;
+    max-height: 423px;
+  }
+
+  .article-data-container {
+    margin-bottom: 40px;
+  }
+
+  .article-consult-text {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
+  .article-consult-btn {
+    width: 65%;
+    margin-bottom: 100px;
+  }
+
+  .article-cards-subtitle {
+    margin: 0 0 40px;
+  }
+
+  .article-data-list {
+    grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
+    grid-gap: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .article-data-list::-webkit-scrollbar-button:horizontal:end {
+    display: none;
+    }
+    .article-data-list::-webkit-scrollbar-button:horizontal:start {
+      display: none;
+    }
+
+  .article-cards-slider-position {
+    margin-bottom: 100px;
+  }
+  .article-cards-slider-arrows-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 833px) {
+  .article {
+    width: 375px;
+  }
+
+  .article-main-container {
+    width: 325px;
+  }
+
+  .article-nav {
+    margin: 100px 0 20px;
+  }
+
+  .article-nav-sting {
+    font-size: 16px;
+  }
+
+  .article-img-container {
+    max-width: 325px;
+    max-height: 272px;
+    border-radius: 30px;
+  }
+
+  .article-title {
+    font-size: 32px;
+  }
+
+  .article-data-container {
+    margin-bottom: 0;
+  }
+
+  .article-data-day {
+    font-size: 16px;
+  }
+
+  .article-data {
+    font-size: 16px;
+  }
+
+  .article-consult-text {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .article-consult-btn {
+    width: 100%;
+    height: 62px;
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .article-cards-subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .article-data-list {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+    grid-gap: 0 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .article-cards-slider-position {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 148px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .article-cards-slider-position {
+    margin-bottom: 80px;
+  }
+}
