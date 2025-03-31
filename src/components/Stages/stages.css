@@ -149,8 +149,17 @@
   margin: 20px 0 20px 40px;
 }
 
+.stages-name-alert{
+  margin-bottom: 20px;
+}
+
 .steges-text-alert{
   color: #69be31;
+  margin-bottom: 10px;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  font-weight: 400;
 }
 
 .stages-name-paragraph::before {

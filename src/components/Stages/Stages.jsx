@@ -81,7 +81,7 @@ function Stages(props) {
                         </div>
                         <div className="stages-text-container">
                             <p className="stages-name stages-name-paragraph">После консультации и тщательного анализа проблемы, на основе полученных данных составляется выписка ( в согласованные с владельцем сроки), в которой содержится информация о самой консультации, а также индивидуальный план работы, включающий рекомендации, домашние задания.</p>
-                            <span className="stages-name-alert">*Входит в очный формат </span>
+                            <span className="stages-name-alert steges-text-alert">*Входит в очный формат </span>
                         </div>
                     </li>
                     <li className="stages-item">
@@ -93,7 +93,7 @@ function Stages(props) {
                         </div>
                         <div className="stages-text-container">
                             <p className="stages-name stages-name-paragraph">Анализируем изменения в поведении питомца, оцениваем результаты и, если требуется, акцентируем внимание на областях требующих дополнительной работы. При необходимости, мы корректируем ранее составленный чек-лист, а также, можем порекомендавать дополнительные упражнения для закрепления навыков.</p>
-                            <p className="stages-name"><span className="steges-text-alert">*Полное сопровождение с обратной связью доступно только при личном ведении</span>животного в течение практической работы с ним</p>
+                            <p className="stages-name"><span className="steges-text-alert">*Полное сопровождение с обратной связью доступно только при личном ведении</span> животного в течение практической работы с ним</p>
                         </div>
                     </li>
                 </ul>
