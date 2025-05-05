@@ -136,9 +136,7 @@
   line-height: auto;
   font-weight: 400;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center
+  text-align: center;
 }
 
 .offer-location {

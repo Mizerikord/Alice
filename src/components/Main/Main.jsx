@@ -16,15 +16,15 @@ function Main(props) {
 
     return (
         <>
-            <Promo onMenu={props.onMenu}/>
+            <Promo onMenu={props.onMenu} />
             <AboutMe />
-            <HelpYou/>
-            <Services/>
-            <Stages/>
-            <Results/>
-            <Blog onCard={props.onCard}/>
-            <Ready onSend={props.onSend}/>
-            <Contacts/>
+            <HelpYou />
+            <Services onMenu={props.onMenu}/>
+            <Stages />
+            <Results />
+            <Blog onCard={props.onCard} />
+            <Ready onSend={props.onSend} />
+            <Contacts />
         </>
     );
 }

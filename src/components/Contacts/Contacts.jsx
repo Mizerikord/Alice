@@ -27,7 +27,9 @@ function Contacts() {
                         </Link>
                     </li>
                     <li className="contact-links-item">
-                        <Link to="" target='_blanc' className="contact-link">
+                        <Link to="mailto:info@darkfox.ru" target='_blanc' className="contact-link" onClick={(e) => {
+                            window.location = "mailto:info@darkfox.ru";
+                        }}>
                             <p className="contact-text">info@darkfox.ru</p>
                             <img src={email} alt="Почта" className="contact-icon" />
                         </Link>

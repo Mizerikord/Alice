@@ -110,7 +110,13 @@
   text-decoration: none;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  transition-duration: 0.2s;
+}
+
+.article-consult-btn:hover{
+  transition-duration: 0.2s;
+  box-shadow: 0 0 30px #69be31;
 }
 
 .article-cards-subtitle {

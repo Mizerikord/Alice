@@ -1,17 +1,49 @@
 .main {
-    /* width: 100%; */
     width: 1440px;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    background-image: url(../../../media/камень.png);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: bottom;
     position: relative;
     padding-bottom: 160px;
+    margin: 0;
+    transition-duration: 1s;
+  }
+
+  .promo-image{
+    position: absolute;
+    bottom: 0;
+    transition-duration: 1s;
+  }
+
+  .promo-image-to-bottom{
+    bottom: 100px;
+    transition-duration: 1s;
+  }
+
+  .paw-container{
+    overflow: hidden;
+    position: absolute;
+    bottom: -360px;
+    left: 0px;
+    display: none;
+    block-size: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    background-color: rgba(17, 17, 17, 1);
+  }
+
+  .paw-img{
+    margin-left: -200px;
+    width: 582px;
+    height: 340px;
+    background-color: rgba(17, 17, 17, 1);
+    display: none;
+  }
+
+  .paw-container-to-bottom{
+    display: block;
   }
   
   .main-container {
@@ -23,7 +55,6 @@
   .video-background {
     width: 1440px;
     height: 100%;
-    z-index: -1;
   }
   
   .main-title {
@@ -34,10 +65,20 @@
     font-size: 96px;
     line-height: 90%;
     letter-spacing: normal;
+    transition-duration: 1s;
+  }
+
+  .main-to-bottom{
+    transition-duration: 1s;
+    margin-bottom: 250px;
+  }
+
+  .main-title-to-bottom{
+    transition-duration: 1s;
+    margin: 1000px 0 20px 0;
   }
   
   .main-container {
-    z-index: 1;
     position: absolute;
     margin-right: 84px;
     display: flex;
@@ -55,6 +96,12 @@
     line-height: auto;
     font-weight: 400;
     width: 436px;
+    transition-duration: 0.5s;
+  }
+
+  .main-subtitle-to-bottom {
+    margin: 0 0 50px;
+    transition-duration: 0.5s;
   }
   
   .main-subscribe-btn {
@@ -74,12 +121,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: 0.2s;
+    transition-duration: 1s;
+    z-index: 2;
+    position: absolute;
+    bottom: 249px;
+  }
+
+  .main-subscribe-btn-to-bottom {
+    bottom: -440px;
   }
 
   .main-subscribe-btn:hover {
     box-shadow: 0 0 20px #69be31;
-    text-decoration: 0.2s;
+    transition-duration: 1s;
   }
   
   .menu-burger {

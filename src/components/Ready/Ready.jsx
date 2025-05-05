@@ -49,7 +49,7 @@ function Ready(props) {
                             }
                         })}
                     />
-                    <input type="tel" className={`form-user-data ${errors?.phone && "form-user-data-error"} ${isValid && "form-user-data-ok"}`} placeholder='Введите номер телефона'
+                    <input type="tel" className={`form-user-data form-user-data-tel ${errors?.phone && "form-user-data-error"} ${isValid && "form-user-data-ok"}`} placeholder='Введите номер телефона'
                         {...register("phone", {
                             required: true,
                             pattern: {

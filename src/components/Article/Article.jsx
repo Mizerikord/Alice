@@ -14,7 +14,7 @@ function Article(props) {
     function handleClick(e) {
         props.onMenu(e.target);
     }
-    // const [size, setSize] = useState("");
+
     const [position, setPosition] = useState("");
     const [onCardOpen, setCardOpen] = useState(false);
     const elRef = useRef();
@@ -28,7 +28,7 @@ function Article(props) {
                 if (e.deltaY === 0) return;
                 e.preventDefault();
                 el.scrollTo({
-                    left: el.scrollLeft + e.deltaY,
+                    left: el.scrollLeft + e.deltaY*2,
                     behavior: "smooth"
                 });
             };
@@ -44,18 +44,6 @@ function Article(props) {
     function handleCardOpen(cardOpen) {
         setCardOpen(cardOpen);
     }
-
-    // useEffect(() => {
-    //     const onPageLoad = () => {
-    //         setSize(document.querySelector(".article-data-list").scrollWidth);
-    //     };
-    //     if (document.readyState === 'complete') {
-    //         onPageLoad();
-    //     } else {
-    //         window.addEventListener('load', onPageLoad, false);
-    //         return () => window.removeEventListener('load', onPageLoad);
-    //     }
-    // }, []);
 
     const currentData = {
         blogUrl: "",
@@ -87,6 +75,9 @@ function Article(props) {
         currentData._id = props.isCard._id
         currentData.dataDay = props.isCard.dataDay
     }
+    function openPopup(){
+        props.onMenu();
+    }
 
     return (
         <>
@@ -109,7 +100,7 @@ function Article(props) {
                             return <p className="article-data" key={index}>{text}</p>
                         })}
                         <p className="article-consult-text">Обнаружили что-то подобное у своего питомца? Не ждите — запишитесь на консультацию и получите помощь от специалиста</p>
-                        <Link to="/#Ready" className="article-consult-btn">Записаться на консультацию</Link>
+                        <input type='button' className="article-consult-btn" defaultValue="Записаться на консультацию" onClick={openPopup}/>
                         <h3 className="article-cards-subtitle">Читайте также</h3>
                         <ul className="article-data-list" ref={elRef} >
                             {cards.map((elem) => {
@@ -118,7 +109,6 @@ function Article(props) {
                                     key={elem._id}
                                     onOpen={handleCardOpen} />
                             })}
-
                         </ul>
                         <div className="article-cards-slider-position">
                             <div className="article-cards-slider-arrows-container">

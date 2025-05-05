@@ -3,13 +3,58 @@ import './aboutme.css';
 import promo from '../../media/about-promo.png';
 import AboutCard from './AboutCard/AboutCard';
 import CardData from '../../utils/cards-data';
+import { useRef, useEffect, useState } from "react";
 
 function AboutMe() {
-
     const cards = CardData;
+    const elRef = useRef();
+    const [curPos, setCurPos] = useState(0)
+
+    function disableScroll() {
+        const scrollTop =
+            window.pageYOffset ||
+            document.documentElement.scrollTop;
+        const scrollLeft =
+            window.pageXOffset ||
+            document.documentElement.scrollLeft;
+        window.onscroll = function () {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+    }
+
+    useEffect(() => {
+        const el = elRef.current;
+        if (el) {
+            const onWheel = e => {
+                let winWidth = 0;
+                if (e.deltaY == 0) return;
+                if(window.innerWidth >= 1440){
+                    winWidth = 861;
+                } else if ( window.innerWidth < 1440 && window.innerWidth > 833){
+                    winWidth = 1347;
+                } else if (window.innerWidth < 834) {
+                    winWidth = +808.5;
+                }
+                e.preventDefault();
+                el.scrollTo({
+                    left: el.scrollLeft + e.deltaY*2,
+                    behavior: "smooth"
+                });
+                setCurPos(el.scrollLeft);
+                if(el.scrollLeft === 0 && e.deltaY < 0){
+                    document.querySelector(".about-me").scrollIntoView({ behavior: "smooth", block: "start" });
+                } else if (el.scrollLeft === winWidth && e.deltaY > 0){
+                    document.querySelector(".help-you").scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+            };
+            el.addEventListener("wheel", onWheel);
+            return () => el.removeEventListener("wheel", onWheel);
+        }
+    }, []);
+
 
     return (
-        <section className="about-me" id='AboutMe'>
+        <section className="about-me" id='AboutMe' >
             <h2 className="section-title">Обо мне</h2>
             <div className="about-description">
                 <div className="about-owner-container">
@@ -37,7 +82,7 @@ function AboutMe() {
             </div>
             <div className="advantage">
                 <h3 className="advantage-title">"Преимущества"</h3>
-                <div className="advantage-slider">
+                <div className="advantage-slider" ref={elRef} >
                     <ul className="advantage-list" id="element">
                         {cards.map((card) => (<AboutCard data={card}
                             key={card._id} />))}

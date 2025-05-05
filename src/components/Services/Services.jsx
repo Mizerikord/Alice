@@ -1,8 +1,11 @@
 import React from 'react';
 import './services.css';
-import { HashLink as Link } from 'react-router-hash-link';
 
-function Services() {
+function Services(props) {
+
+    function openPopup(){
+        props.onMenu();
+    }
 
     return (
         <section className="services" id='Services'>
@@ -23,7 +26,7 @@ function Services() {
                                 <p className="offer-cost">3000  ₽  </p>
                             </div>
                         </div>
-                        <Link to="/#Ready" className="sign-btn" defaultValue="Записаться">Записаться</Link>
+                        <input className="sign-btn" defaultValue="Записаться" onClick={openPopup}/>
                     </li>
                     <li className="services-item">
                         <div className="offers">
@@ -39,7 +42,7 @@ function Services() {
                                 <p className="offer-cost">5000  ₽  </p>
                             </div>
                         </div>
-                        <Link to="/#Ready" className="sign-btn" defaultValue="Записаться">Записаться</Link>
+                        <input className="sign-btn" defaultValue="Записаться" onClick={openPopup}/>
                     </li>
                     <li className="services-item">
                         <div className="offers">
@@ -57,7 +60,7 @@ function Services() {
                             </div>
 
                         </div>
-                        <Link to="/#Ready" className="sign-btn" defaultValue="Записаться">Записаться</Link>
+                        <input className="sign-btn" defaultValue="Записаться" onClick={openPopup}/>
                     </li>
                 </ul>
             </div>

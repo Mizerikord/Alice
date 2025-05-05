@@ -1,14 +1,32 @@
 .help-you {
   width: 1440px;
   background-color: #111111;
+  overflow: hidden;
+}
+
+.title-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  position: relative;
+  block-size: auto;
 }
 
 .section-title {
-  margin: 100px 100px 50px 100px;
+  width: 50%;
+  margin: 100px 0 50px 100px;
+}
+
+.help-paw {
+  width: 50%;
+  position: absolute;
+  right: 100px;
 }
 
 .help-container {
   margin: 220px 100px 0;
+  z-index: 1;
 }
 
 .demeanor-list {
@@ -18,7 +36,7 @@
   grid-template-rows: repeat(4, 1fr);
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px 0;
   grid-gap: 40px;
 }
 
@@ -37,7 +55,7 @@
   outline: 3px solid #69be31;
 }
 
-.demeanor-item{
+.demeanor-item {
   align-items: flex-end;
   width: 280px;
   height: 124px;
@@ -59,6 +77,13 @@
 .demeanor-monitor > .demeanor-img {
   position: absolute;
   display: block;
+  left: -1500px;
+}
+
+.demeanor-monitor > .demeanor-img-animate {
+  transform: translate(1410px, 0);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .demeanor-monitor > .demeanor-text {
@@ -80,7 +105,7 @@
   display: none;
 }
 
-.demeanor-range-position{
+.demeanor-range-position {
   width: 68px;
   color: #f6f6f6;
   text-wrap: none;
@@ -98,7 +123,12 @@
   }
 
   .section-title {
-    margin: 100px 100px 50px 100px;
+    margin: 100px 100px 0 100px;
+    width: 100%;
+  }
+
+  .help-paw{
+    width: 70%;
   }
 
   .help-container {
@@ -120,7 +150,7 @@
     margin-bottom: 30px;
   }
 
-  .demeanor-item{
+  .demeanor-item {
     width: 238px;
     height: 124px;
   }
@@ -189,7 +219,7 @@
     background-color: rgba(36, 36, 36, 0.8);
   }
 
-  .help-slider-right{
+  .help-slider-right {
     transform: rotate(180deg);
   }
 
@@ -222,7 +252,7 @@
     margin-right: 4px;
   }
 
-  .demeanor-item-slider{
+  .demeanor-item-slider {
     color: #f6f6f6;
     display: flex;
     align-items: center;
@@ -256,6 +286,6 @@
 
   .demeanor-range-line-position {
     height: 9px;
-    background-color: #69be31
+    background-color: #69be31;
   }
 }

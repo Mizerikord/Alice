@@ -6,8 +6,6 @@ import { useState, useEffect } from 'react';
 function ResultCards(props) {
     const cards = props.cards;
     const [isImgCount, setImgCount] = useState(0);
-    // console.log(Object.keys(cards[props.isCount - 1].resultText[props.isTextCount]));
-    
 
     function handleImgCount(e) {
         if (e.target.id === "left") {

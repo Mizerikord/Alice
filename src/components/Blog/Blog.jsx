@@ -43,7 +43,7 @@ function Blog(props) {
                     })}
                 </ul>
                 {data.length > isCountEl ?
-                    <input type="button" defaultValue="Больше статей" className="blog-add" onClick={handleAddCard} />
+                    <input type="button" value="Больше статей" className="blog-add" onClick={handleAddCard} />
                     : ""}
 
             </div>

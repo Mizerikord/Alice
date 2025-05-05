@@ -7,7 +7,11 @@ import email from '../../media/e-mail.svg';
 
 
 
-function Footer() {
+function Footer(props) {
+
+    function openPopup() {
+        props.onMenu();
+    }
 
     return (
         <footer className="footer" id='Footer'>
@@ -26,13 +30,13 @@ function Footer() {
                         <li className="footer-nav-item"><Link to="/#Contacts" className="footer-anchor">Контакты</Link></li>
                     </ul>
                 </div>
-                <Link to="/#Ready" className="footer-service-btn">Записаться на консультацию</Link>
+                <input type="button" className="footer-service-btn" value="Записаться на консультацию" onClick={openPopup} />
             </div>
             <h2 className="owner-name-title">ШУМАКОВА АЛИСА</h2>
             <div className="footer-callback-container">
                 <ul className="footer-links">
                     <li className="footer-link">
-                        <Link to="https://t.me/cosm_alison" target="_blanc" className="footer-contact">
+                        <Link to="https://xn--r1a.website/s/wild_cats13" target="_blanc" className="footer-contact">
                             <img src={tlg} alt="" className="footer-contact-icon" />
                             <p className="footer-contact-text">@cosm_alison</p>
                         </Link>
@@ -44,7 +48,9 @@ function Footer() {
                         </Link>
                     </li>
                     <li className="footer-link">
-                        <Link to="" className="footer-contact">
+                        <Link to="mailto:info@darkfox.ru" target="_blanc" className="footer-contact" onClick={(e) => {
+                            window.location = "mailto:info@darkfox.ru";
+                        }}>
                             <img src={email} alt="" className="footer-contact-icon" />
                             <p className="footer-contact-text">info@darkfox.ru</p>
                         </Link>

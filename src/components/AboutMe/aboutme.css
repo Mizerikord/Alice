@@ -1,4 +1,6 @@
 .about-me {
+  margin: 0;
+  margin-top: -1px;
   width: 1440px;
   background-image: url(../../media/ФОН_КОШКА.png);
   background-position: bottom right;
@@ -8,7 +10,9 @@
 }
 
 .section-title {
+  position: relative;
   margin: 100px 100px 50px 100px;
+  z-index: 1;
 }
 
 .about-owner-container {
@@ -74,6 +78,9 @@
 
 .advantage {
   margin: 0 100px 30px;
+}
+
+.advantage-slider{
   overflow-x: scroll;
 }
 
@@ -90,20 +97,20 @@
     display: flex;
     gap: 40px;
     width: fit-content;
-    margin: 0;
+    margin: 2px 0 0;
 }
 
-.advantage::-webkit-scrollbar {
+.advantage-slider::-webkit-scrollbar {
   height: 10px;
   border-radius: 10px;
 }
 
-.advantage::-webkit-scrollbar-thumb{
+.advantage-slider::-webkit-scrollbar-thumb{
   background-color: #69BE31;
   border-radius: 10px;
 }
 
-.advantage::-webkit-scrollbar-track {
+.advantage-slider::-webkit-scrollbar-track {
   background-color: rgba(36, 36, 36, 0.8);
   border-radius: 10px;
 }
@@ -117,6 +124,7 @@
   
   .section-title {
     margin: 40px;
+    z-index: 2;
   }
   
   .about-owner-container {
@@ -198,7 +206,6 @@
   
   .advantage {
     margin: 0 25px 30px;
-    overflow-x: scroll;
   }
   
   .advantage-title {

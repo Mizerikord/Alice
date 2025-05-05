@@ -1,11 +1,10 @@
 class MainApi {
     constructor({ baseUrl, headers }) {
         this._addres = baseUrl;
-        this._headers = headers;
     }
 
     _getAnswer(res) {
-        if (res.ok) {
+        if (res.status === 200) {
             return res.json();
         }
         return Promise.reject(`${res.status}`);
@@ -20,7 +19,7 @@ class MainApi {
             },
             body: JSON.stringify({
                 name: customer.name,
-                phone: customer.name,
+                phone: customer.phone,
                 message: customer.message,
                 communication: customer.communication
             })
@@ -29,10 +28,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-    baseUrl: 'http://localhost:3000/',
-    headers: {
-        'Content-Type': 'application/json'
-    }
+    baseUrl: 'http://localhost:3002/',
 });
 
 export default mainApi

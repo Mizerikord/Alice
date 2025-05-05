@@ -3,6 +3,7 @@ import './helpyou.css';
 import HelpYouCards from "./HelpYouCards/HelpYouCards";
 import HelpCardData from '../../utils/help-you-cards';
 import arrow from '../../media/help-slider-arrow.svg';
+import paw from "../../media/paw-gif.gif";
 import { useState, useEffect } from 'react';
 
 function HelpYou() {
@@ -19,7 +20,7 @@ function HelpYou() {
         monitorCard.querySelector(".demeanor-text").textContent = currentCard.text;
         monitorCard.id = id;
         setCount(id);
-        document.querySelector(".demeanor-range-position").textContent = `${id} / ${cards.length-1}`
+        document.querySelector(".demeanor-range-position").textContent = `${id} / ${cards.length - 1}`
     }
 
     function clickSlider(e) {
@@ -51,7 +52,10 @@ function HelpYou() {
 
     return (
         <section className="help-you" id='HelpYou'>
-            <h2 className="section-title">Чем я могу помочь?</h2>
+            <div className="title-container">
+                <h2 className="section-title">Чем я могу помочь?</h2>
+                <img src={paw} alt="лапки" className="help-paw" />
+            </div>
             <div className="help-container">
                 <div className="help-slider">
                     <div className="help-slider-arrow help-slider-left" onClick={clickSlider}><img src={arrow} alt="" className="help-slider-img" /></div>
@@ -60,7 +64,7 @@ function HelpYou() {
                 </div>
                 <ul className="demeanor-list">
                     <li className="demeanor-monitor" id={cards[0]._id}>
-                        <img src={cards[0].imgUrl} alt="" className="demeanor-img" />
+                        <img src={cards[0].imgUrl} alt="" className="demeanor-img demeanor-img-animate" />
                         <h3 className="demeanor-title">{cards[0].title}</h3>
                         <p className="demeanor-text">{cards[0].text}</p>
                     </li>
@@ -69,10 +73,10 @@ function HelpYou() {
                             card={elem}
                             key={elem._id}
                             onChange={changeCard} />
-})}
+                    })}
                 </ul>
                 <div className="demeanor-range">
-                    <p className="demeanor-range-position">{`${0} / ${cards.length-1}`}</p>
+                    <p className="demeanor-range-position">{`${0} / ${cards.length - 1}`}</p>
                     <div className="demeanor-range-line">
                         <div className="demeanor-range-line-position"></div>
                     </div>
