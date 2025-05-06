@@ -4,7 +4,7 @@ import './services.css';
 function Services(props) {
 
     function openPopup(){
-        props.onMenu();
+        props.openPopup();
     }
 
     return (

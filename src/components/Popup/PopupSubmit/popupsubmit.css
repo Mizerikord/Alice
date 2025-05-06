@@ -28,24 +28,6 @@
     position: relative;
 }
 
-.popup-close {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 20px;
-  height: 20px;
-}
-
-.popup-close {
-  transition-duration: 0.2s;
-}
-
-.popup-close:hover {
-  transition-duration: 0.2s;
-  width: 22px;
-  height: 22px;
-}
-
 .popup-submit-box{
     margin: 50px;
     display: flex;

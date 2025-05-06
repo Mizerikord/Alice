@@ -134,63 +134,62 @@ function App() {
     }
   }
 
-  function slideMenu() {
-    const x = window.innerWidth;
-    if (x > 1440) {
-      const y = window.pageYOffset;
-      setScrollY(y);
-      if (location.pathname === "/") {
-        if (scrollY < y && isLoaded) {
-          if (!document.querySelector(".main-to-bottom")) {
+  useEffect(() => {
+    function slideMenu() {
+      const x = window.innerWidth;
+      if (x > 1440) {
+        const y = window.pageYOffset;
+        setScrollY(y);
+        if (location.pathname === "/") {
+          if (scrollY < y && isLoaded) {
+            if (!document.querySelector(".main-to-bottom")) {
+              if (!document.querySelector(".main")) {
+                return;
+              }
+              document.querySelector(".main").classList.add("main-to-bottom");
+              document
+                .querySelector(".main-title")
+                .classList.add("main-title-to-bottom");
+              document
+                .querySelector(".main-subtitle")
+                .classList.add("main-subtitle-to-bottom");
+              document
+                .querySelector(".main-subscribe-btn")
+                .classList.add("main-subscribe-btn-to-bottom");
+              document
+                .querySelector(".promo-image")
+                .classList.add("promo-image-to-bottom");
+              document.querySelector(".paw-container").style.display = "block";
+              document.querySelector(".paw-img").style.display = "block";
+              return window.removeEventListener("scroll", slideMenu);
+            }
+          } else {
             if (!document.querySelector(".main")) {
               return;
             }
-            document.querySelector(".main").classList.add("main-to-bottom");
+            document.querySelector(".main").classList.remove("main-to-bottom");
             document
               .querySelector(".main-title")
-              .classList.add("main-title-to-bottom");
+              .classList.remove("main-title-to-bottom");
             document
               .querySelector(".main-subtitle")
-              .classList.add("main-subtitle-to-bottom");
+              .classList.remove("main-subtitle-to-bottom");
             document
               .querySelector(".main-subscribe-btn")
-              .classList.add("main-subscribe-btn-to-bottom");
+              .classList.remove("main-subscribe-btn-to-bottom");
             document
               .querySelector(".promo-image")
-              .classList.add("promo-image-to-bottom");
-            document.querySelector(".paw-container").style.display = "block";
-            document.querySelector(".paw-img").style.display = "block";
+              .classList.remove("promo-image-to-bottom");
+            document.querySelector(".paw-container").style.display = "none";
+            document.querySelector(".paw-img").style.display = "none";
             return window.removeEventListener("scroll", slideMenu);
           }
-        } else {
-          if (!document.querySelector(".main")) {
-            return;
-          }
-          document.querySelector(".main").classList.remove("main-to-bottom");
-          document
-            .querySelector(".main-title")
-            .classList.remove("main-title-to-bottom");
-          document
-            .querySelector(".main-subtitle")
-            .classList.remove("main-subtitle-to-bottom");
-          document
-            .querySelector(".main-subscribe-btn")
-            .classList.remove("main-subscribe-btn-to-bottom");
-          document
-            .querySelector(".promo-image")
-            .classList.remove("promo-image-to-bottom");
-          document.querySelector(".paw-container").style.display = "none";
-          document.querySelector(".paw-img").style.display = "none";
-          return window.removeEventListener("scroll", slideMenu);
         }
       }
+      return;
     }
-    return;
-  }
-
-  useEffect(() => {
     window.addEventListener("scroll", slideMenu);
-  }, [scrollY]);
+  }, [scrollY, isLoaded, location.pathname]);
 
   return (
     <div className="page">
@@ -199,7 +198,8 @@ function App() {
           path="*"
           element={
             <Main
-              onMenu={openPopup}
+              onMenu={handleMenuOpen}
+              openPopup={openPopup}
               onCard={handleSetCurrentCard}
               onSend={sendCustomerData}
             />
@@ -212,13 +212,13 @@ function App() {
             <Article
               isCard={isCurrentCard}
               cards={blogCards}
-              onMenu={openPopup}
+              openPopup={openPopup}
             />
           }
         />
         <Route path="*" element={<ErrorPage onMenu={handleMenuOpen} />} />
       </Routes>
-      <Footer onMenu={openPopup} />
+      <Footer openPopup={openPopup} />
       <Popup onSend={sendCustomerData} onClosePopup={closePopup} />
       <PopupSubmit onClosePopup={closePopup} />
     </div>

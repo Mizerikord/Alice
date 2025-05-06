@@ -15,7 +15,7 @@ function Promo(props) {
 
     return (
         <main className='main'>
-            <Header onMenu={props.onMenu} />
+            <Header onMenu={props.onMenu} openPopup={props.openPopup}/>
             <video className='video-background' autoPlay loop muted>
                 <source src={MainCat} type='video/mp4' />
             </video>

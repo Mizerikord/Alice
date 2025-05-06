@@ -34,9 +34,6 @@
     right: 30px;
     width: 20px;
     height: 20px;
-}
-
-.popup-close{
     transition-duration: 0.2s;
 }
 
@@ -70,6 +67,7 @@
     justify-content: space-between;
     margin-bottom: 20px;
     position: relative;
+    align-items: center;
 }
 
 .popup-user-data{
@@ -96,8 +94,29 @@
     outline: 2px solid #4caf50;
 }
 
-.popup-user-data-phone{
-    /* padding-left: 40px; */
+.PhoneInput{
+    width: 70px;
+    height: 27px;
+    width: 230px;
+    height: 67px;
+    border-radius: 100px;
+    background-color: rgba(246, 246, 246, 0.3);
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    font-weight: 400;
+    color: #f6f6f6;
+}
+
+.PhoneInputInput{
+    border: none;
+    outline: none;
+    background-color: rgba(246, 246, 246, 0);
+    color: #f6f6f6;
 }
 
 .popup-callback-container{
@@ -121,10 +140,16 @@
     letter-spacing: -2%;
     font-weight: 400;
     padding: 20px;
+    color: #f6f6f6;
+    resize: none;
 }
-
+    
 .popup-textarea-error{
     outline: 2px solid #DE1E1E;
+}
+
+.popup-textarea-ok{
+    outline: 2px solid #4caf50;
 }
 
 .popup-radio-container{
@@ -191,7 +216,16 @@
     color: #111111;
     transition-duration: 0.2s;
     border: none;
+    outline: none;
     margin-bottom: 20px;
+}
+
+.popup-submit-btn-disable{
+    background-color: rgb(133, 133, 133)
+}
+
+.popup-submit-btn-disable:hover{
+    box-shadow: none;
 }
 
 .popup-submit-btn:hover{
@@ -207,4 +241,124 @@
     font-weight: 400;
     color: #f6f6f6;
     margin: 0;
+}
+
+@media screen and (max-width: 833px) {
+    .popup {
+        width: 325px;
+        border-radius: 40px;
+        border: 2px solid #69BE31;
+    }
+    
+    .popup-close{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .popup-close:hover{
+        transition-duration: 0.2s;
+        width: 12px;
+        height: 12px;
+    }
+
+    .popup-container{
+        margin: 20px;
+    }
+    
+    .popup-title{
+        width: 285px;
+        font-size: 24px;
+        margin: 0 0 20px 0;
+    }
+    
+    .popup-data-container{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    
+    .popup-user-data{
+        width: 245px;
+        font-size: 16px;
+    }
+    
+    .popup-user-data-error{
+        outline: 2px solid #DE1E1E;
+    }
+    
+    .popup-user-data-ok{
+        outline: 2px solid #4caf50;
+    }
+    
+    .PhoneInput{
+        width: 245px;
+        height: 67px;
+        font-size: 16px;
+    }
+    
+    .PhoneInputInput{
+        border: none;
+        outline: none;
+        background-color: rgba(246, 246, 246, 0);
+        color: #f6f6f6;
+    }
+    
+    .popup-callback-container{
+        flex-direction: column-reverse;
+    }
+    
+    .popup-textarea{
+        width: 245px;
+        min-height: 106px;
+        border-radius: 40px;
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
+    
+    .popup-radio-container{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    
+    .popup-radio-text{
+        font-size: 16px;
+    }
+    
+    .popup-radio{
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    
+    .popup-radio[type="radio"]:checked::after {
+        width: 10px;
+        height: 10px;
+      }
+    
+    .popup-submit-btn{
+        height: 62px;
+        font-size: 16px;
+    }
+    
+    .popup-submit-btn:hover{
+        transition-duration: 0.2s;
+    }
+    
+    .popup-commit{
+        font-family: "Manrope", Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        font-weight: 400;
+        color: #f6f6f6;
+        margin: 0;
+    }
+
+    .popup-commit-link{
+        text-decoration: underline;
+    }
 }

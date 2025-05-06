@@ -16,10 +16,10 @@ function Main(props) {
 
     return (
         <>
-            <Promo onMenu={props.onMenu} />
+            <Promo openPopup={props.openPopup} onMenu={props.onMenu}/>
             <AboutMe />
             <HelpYou />
-            <Services onMenu={props.onMenu}/>
+            <Services openPopup={props.openPopup}/>
             <Stages />
             <Results />
             <Blog onCard={props.onCard} />

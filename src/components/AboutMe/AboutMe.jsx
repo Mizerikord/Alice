@@ -8,26 +8,25 @@ import { useRef, useEffect, useState } from "react";
 function AboutMe() {
     const cards = CardData;
     const elRef = useRef();
-    const [curPos, setCurPos] = useState(0)
 
-    function disableScroll() {
-        const scrollTop =
-            window.pageYOffset ||
-            document.documentElement.scrollTop;
-        const scrollLeft =
-            window.pageXOffset ||
-            document.documentElement.scrollLeft;
-        window.onscroll = function () {
-            window.scrollTo(scrollLeft, scrollTop);
-        };
-    }
+    // function disableScroll() {
+    //     const scrollTop =
+    //         window.pageYOffset ||
+    //         document.documentElement.scrollTop;
+    //     const scrollLeft =
+    //         window.pageXOffset ||
+    //         document.documentElement.scrollLeft;
+    //     window.onscroll = function () {
+    //         window.scrollTo(scrollLeft, scrollTop);
+    //     };
+    // }
 
     useEffect(() => {
         const el = elRef.current;
         if (el) {
             const onWheel = e => {
                 let winWidth = 0;
-                if (e.deltaY == 0) return;
+                if (e.deltaY === 0) return;
                 if(window.innerWidth >= 1440){
                     winWidth = 861;
                 } else if ( window.innerWidth < 1440 && window.innerWidth > 833){
@@ -40,7 +39,6 @@ function AboutMe() {
                     left: el.scrollLeft + e.deltaY*2,
                     behavior: "smooth"
                 });
-                setCurPos(el.scrollLeft);
                 if(el.scrollLeft === 0 && e.deltaY < 0){
                     document.querySelector(".about-me").scrollIntoView({ behavior: "smooth", block: "start" });
                 } else if (el.scrollLeft === winWidth && e.deltaY > 0){

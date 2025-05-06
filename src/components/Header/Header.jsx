@@ -12,6 +12,10 @@ function Header(props) {
         props.onMenu(e.target);
     }
 
+    function handlePopupOpen(){
+        props.openPopup();
+    }
+
     return (
         <Routes>
             {["/", '/state', '/blog', '/error-404'].map(path =>
@@ -30,7 +34,7 @@ function Header(props) {
                             <li className="nav-item-footer"><Link to="/#Footer" className="nav-anchor">Политика конфиденциальности</Link></li>
                         </ul>
                         <div className="header-callback-container">
-                            <Link to="/#Ready" className="header-callback-btn">Записаться</Link>
+                            <input type='button' className="header-callback-btn" value="Записаться" onClick={handlePopupOpen} />
                             <div className="header-link-container">
                                 <ul className="header-callback-links">
                                     <li className="header-callback-item">

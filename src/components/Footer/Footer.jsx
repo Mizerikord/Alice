@@ -10,7 +10,7 @@ import email from '../../media/e-mail.svg';
 function Footer(props) {
 
     function openPopup() {
-        props.onMenu();
+        props.openPopup();
     }
 
     return (
