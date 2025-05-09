@@ -3,26 +3,14 @@ import './aboutme.css';
 import promo from '../../media/about-promo.png';
 import AboutCard from './AboutCard/AboutCard';
 import CardData from '../../utils/cards-data';
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 
 function AboutMe() {
     const cards = CardData;
-    const elRef = useRef();
-
-    // function disableScroll() {
-    //     const scrollTop =
-    //         window.pageYOffset ||
-    //         document.documentElement.scrollTop;
-    //     const scrollLeft =
-    //         window.pageXOffset ||
-    //         document.documentElement.scrollLeft;
-    //     window.onscroll = function () {
-    //         window.scrollTo(scrollLeft, scrollTop);
-    //     };
-    // }
+    const myRef = useRef();
 
     useEffect(() => {
-        const el = elRef.current;
+        const el = myRef.current;
         if (el) {
             const onWheel = e => {
                 let winWidth = 0;
@@ -50,9 +38,10 @@ function AboutMe() {
         }
     }, []);
 
+    
 
     return (
-        <section className="about-me" id='AboutMe' >
+        <section className="about-me" id='about-me'>
             <h2 className="section-title">Обо мне</h2>
             <div className="about-description">
                 <div className="about-owner-container">
@@ -78,9 +67,9 @@ function AboutMe() {
                     </div>
                 </div>
             </div>
-            <div className="advantage">
+            <div className="advantage" id='advantage'>
                 <h3 className="advantage-title">"Преимущества"</h3>
-                <div className="advantage-slider" ref={elRef} >
+                <div className="advantage-slider" ref={myRef}>
                     <ul className="advantage-list" id="element">
                         {cards.map((card) => (<AboutCard data={card}
                             key={card._id} />))}

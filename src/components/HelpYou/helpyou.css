@@ -82,8 +82,8 @@
 
 .demeanor-monitor > .demeanor-img-animate {
   transform: translate(1410px, 0);
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
+  transition-duration: 3s;
+  transition-timing-function: ease-out;
 }
 
 .demeanor-monitor > .demeanor-text {

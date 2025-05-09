@@ -3,9 +3,6 @@ import "./popupsubmit.css";
 import { HashLink as Link } from "react-router-hash-link";
 
 function PopupSubmit(props) {
-    function closePopup(){
-        props.onClosePopup();
-    }
 
 function closePopup(){
     props.onClosePopup();

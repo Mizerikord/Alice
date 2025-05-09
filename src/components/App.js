@@ -26,10 +26,11 @@ function App() {
 
   useEffect(() => {
     setIsLoaded(true);
-    return document
-      .querySelector("#root")
-      .scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
+
+  useEffect(() => {
+   return document.querySelector("#root").scrollIntoView({ block: "start" });
+  }, [isLoaded]);
 
   function sendCustomerData(data) {
     closePopup();
