@@ -83,7 +83,7 @@
 .demeanor-monitor > .demeanor-img-animate {
   transform: translate(1410px, 0);
   transition-duration: 3s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease;
 }
 
 .demeanor-monitor > .demeanor-text {
@@ -196,7 +196,12 @@
 
   .demeanor-monitor > .demeanor-img {
     display: block;
+    left: auto;
   }
+
+  .demeanor-monitor > .demeanor-img-animate {
+  transform: none;
+}
 
   .demeanor-monitor > .demeanor-text {
     display: block;

@@ -81,7 +81,12 @@
   transition-duration: 0.2s;
 }
 
-.position-arrow:hover {
+.position-left-active:hover{
+  background-color: #69be31;
+  transition-duration: 0.2s;
+}
+
+.position-right-active:hover{
   background-color: #69be31;
   transition-duration: 0.2s;
 }
@@ -126,11 +131,24 @@
   border-radius: 25px;
   background-color: rgba(36, 36, 36, 0.8);
   border: none;
+  /* transition-duration: 0.2s; */
+}
+
+.result-left-active:hover {
+  background-color: #69be31;
   transition-duration: 0.2s;
 }
 
-.result-arrow:hover {
+.result-right-active:hover {
   background-color: #69be31;
+  transition-duration: 0.2s;
+}
+
+.result-left-active{
+  transition-duration: 0.2s;
+}
+
+.result-right-active{
   transition-duration: 0.2s;
 }
 

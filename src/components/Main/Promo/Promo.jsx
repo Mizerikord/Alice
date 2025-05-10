@@ -13,9 +13,13 @@ function Promo(props) {
         props.onMenu(e.target);
     }
 
+    function openPopup(){
+        props.openPopup();
+    }
+
     return (
         <main className='main'>
-            <Header onMenu={props.onMenu} openPopup={props.openPopup}/>
+            <Header onMenu={props.onMenu} openPopup={props.openPopup} />
             <video className='video-background' autoPlay loop muted>
                 <source src={MainCat} type='video/mp4' />
             </video>
@@ -27,7 +31,7 @@ function Promo(props) {
             <div className="main-container">
                 <h1 className="main-title">ШУМАКОВА<br />АЛИСА</h1>
                 <p className="main-subtitle">Специалист по коррекции поведения диких и домашних кошек</p>
-                <input className="main-subscribe-btn" type="button" value="Записаться на консультацию" onClick={handleClick}/>
+                <input className="main-subscribe-btn" type="button" value="Записаться на консультацию" onClick={openPopup}/>
             </div>
         </main>
     );

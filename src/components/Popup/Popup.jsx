@@ -2,7 +2,6 @@ import React from 'react';
 import "./popup.css";
 import { useForm, Controller } from "react-hook-form";
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
-import { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import 'react-phone-number-input/style.css';
 
@@ -19,7 +18,6 @@ function Popup(props) {
             communication: "telefone",
         },
     });
-    const [phone, setValue] = useState();
 
     function handleFormSubmit(data) {
         props.onSend({
@@ -32,12 +30,10 @@ function Popup(props) {
 
     const onSubmit = (data, e) => {
         e.preventDefault();
-        data.phone = phone;
         return handleFormSubmit(data);
     }
 
     function closePopup() {
-        setValue("");
         document.querySelector(".popup-user-data").value = "";
         document.querySelector(".PhoneInputInput").value = "";
         document.querySelector(".popup-textarea").value = "";
@@ -55,7 +51,7 @@ function Popup(props) {
                 <form action="#" className="popup-container" onSubmit={handleSubmit(onSubmit)}>
                     <h2 className="popup-title">Оставьте заявку, и я свяжусь с вами для первого шага!</h2>
                     <div className="popup-data-container">
-                        <input type="text" className={`popup-user-data ${errors?.name ? "popup-user-data-error" : ""} ${isValid && "popup-user-data-ok"}`} placeholder="Имя"
+                        <input type="text" className={`popup-user-data ${errors?.name ? "popup-user-data-error" : ""} ${errors?.name ? "":"popup-user-data-ok"}`} placeholder="Имя"
                             {...register("name", {
                                 required: true,
                                 pattern: {
@@ -74,15 +70,14 @@ function Popup(props) {
                             control={control}
                             rules={{
                                 validate: (value) => {
-                                    console.log(value);
-                                    isValidPhoneNumber(toString(value))
+                                    isValidPhoneNumber((value ?? 0).toString())
                                 }
                             }}
                             render={({ field: { onChange, value } }) => (
                                 <PhoneInput
-                                    international
-                                    value={phone}
-                                    onChange={setValue}
+                                    displayInitialValueAsLocalNumber
+                                    value={value}
+                                    onChange={onChange}
                                     defaultCountry="RU"
                                     limitMaxLength
                                     id="popup-phone"
@@ -91,7 +86,7 @@ function Popup(props) {
                         />
                     </div>
                     <div className="popup-callback-container">
-                        <textarea maxLength="300" type="text" className={`popup-textarea ${errors?.message && "popup-textarea-error"} ${isValid && "popup-textarea-ok"}`} placeholder="Опишите вашу проблему"
+                        <textarea maxLength="300" type="text" className={`popup-textarea ${errors?.message && "popup-textarea-error"} ${errors?.message ? "": "popup-textarea-ok"}`} placeholder="Опишите вашу проблему"
                             {...register("message", {
                                 required: true,
                                 pattern: {

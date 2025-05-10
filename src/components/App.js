@@ -29,7 +29,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-   return document.querySelector("#root").scrollIntoView({ block: "start" });
+    return document.querySelector("#root").scrollIntoView({ block: "start" });
   }, [isLoaded]);
 
   function sendCustomerData(data) {
@@ -203,17 +203,19 @@ function App() {
               openPopup={openPopup}
               onCard={handleSetCurrentCard}
               onSend={sendCustomerData}
+              isLocation={location.pathname}
             />
           }
         />
         <Route path="/blog/*" element={<WebLog onMenu={handleMenuOpen} />} />
         <Route
-          path="/article"
+          path="/article/*"
           element={
             <Article
               isCard={isCurrentCard}
               cards={blogCards}
               openPopup={openPopup}
+              onMenu={handleMenuOpen}
             />
           }
         />

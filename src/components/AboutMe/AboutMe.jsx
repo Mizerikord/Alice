@@ -20,7 +20,7 @@ function AboutMe() {
                 } else if ( window.innerWidth < 1440 && window.innerWidth > 833){
                     winWidth = 1347;
                 } else if (window.innerWidth < 834) {
-                    winWidth = +808.5;
+                    winWidth = 809;
                 }
                 e.preventDefault();
                 el.scrollTo({
@@ -41,7 +41,7 @@ function AboutMe() {
     
 
     return (
-        <section className="about-me" id='about-me'>
+        <section className="about-me" id='AboutMe'>
             <h2 className="section-title">Обо мне</h2>
             <div className="about-description">
                 <div className="about-owner-container">

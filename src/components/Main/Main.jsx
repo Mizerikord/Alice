@@ -16,7 +16,7 @@ function Main(props) {
 
     return (
         <>
-            <Promo openPopup={props.openPopup} onMenu={props.onMenu}/>
+            <Promo openPopup={props.openPopup} onMenu={props.onMenu} />
             <AboutMe />
             <HelpYou />
             <Services openPopup={props.openPopup}/>

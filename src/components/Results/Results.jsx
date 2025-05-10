@@ -117,9 +117,9 @@ function Results(props) {
                 <ul className="results-list">
                     <li className="results-item">
                         <div className="result-img-container">
-                            <input id='left' type='button' className="result-arrow result-left" onClick={handleImgCount} />
-                            <img className="result-img" src={cardsData[isCount - 1].resultUrl[isImgCount]} alt="Изображение кошки" />
-                            <input id='right' type='button' className="result-arrow result-right" onClick={handleImgCount} />
+                            <input id='left' type='button' className={`result-arrow result-left ${isImgCount !== 0 && "result-left-active"}`} onClick={handleImgCount} />
+                            <img className="result-img" id={isImgCount} src={cardsData[isCount - 1].resultUrl[isImgCount]} alt="Изображение кошки" />
+                            <input id='right' type='button' className={`result-arrow result-right ${isImgCount !== cardsData[isCount - 1].resultUrl.length - 1 && "result-right-active"}`} onClick={handleImgCount} />
                         </div>
                         <div className="result-paragraph-container">
                             <h3 className="result-paragraph-title">{cardsData[isCount - 1].resultTitle}</h3>
@@ -146,8 +146,8 @@ function Results(props) {
                         <div className="result-line-position"></div>
                     </div>
                     <div className="position-arrows">
-                        <input type="button" id="left" className="position-arrow position-left" onClick={handleCount} />
-                        <input type="button" id="right" className="position-arrow position-right" onClick={handleCount} />
+                        <input type="button" id="left" className={`position-arrow position-left ${isCount - 1 !== 0 && "position-left-active"}`} onClick={handleCount} />
+                        <input type="button" id="right" className={`position-arrow position-right ${isCount - 1 !== cardsData.length - 1 && "position-right-active"}`} onClick={handleCount} />
                     </div>
                 </div>
             </div>
