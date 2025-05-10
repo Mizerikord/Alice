@@ -8,6 +8,7 @@
   justify-content: flex-start;
   align-self: center;
   background-color: #111111;
+  overflow: hidden;
 }
 
 .section-title {

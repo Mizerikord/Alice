@@ -203,6 +203,8 @@
     }
   
     .main-subscribe-btn {
+      position: relative;
+      margin: auto;
       width: 387px;
       height: 73px;
       border-radius: 100px;
