@@ -77,11 +77,13 @@
 .demeanor-monitor > .demeanor-img {
   position: absolute;
   display: block;
-  left: -1500px;
+  left: -500px;
+  opacity: 0;
 }
 
 .demeanor-monitor > .demeanor-img-animate {
-  transform: translate(1410px, 0);
+  transform: translate(410px, 0);
+  opacity: 1;
   transition-duration: 3s;
   transition-timing-function: ease;
 }

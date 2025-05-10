@@ -72,7 +72,7 @@ function BlogCard(props) {
 
     return (
         <li className="blog-card-item">
-            <div className="blog-card" onClick={handleCardOpen}>
+            <div className="blog-card" onMouseEnter={handleCardOpen} onMouseLeave={handleCardOpen}>
                 <div className="blog-data-container">
                     <h3 className="blog-card-title">{card.blogTitle}</h3>
                     <p className="blog-card-text">{card.blogText[0]}</p>

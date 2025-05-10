@@ -43,6 +43,7 @@
 }
 
 .demeanor-img {
+  height: 468px;
   display: none;
   position: absolute;
   bottom: 5px;
@@ -53,6 +54,10 @@
   .demeanor-title {
     width: 95%;
     margin: 0;
+  }
+
+  .demeanor-img {
+    height: 481px;
   }
 }
 
