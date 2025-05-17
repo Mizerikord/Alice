@@ -58,7 +58,7 @@ function Footer(props) {
                 </ul>
                 <div className="copyright-conainer">
                     <p className="copyright copyright-policy">Политика конфиденциальности</p>
-                    <p className="copyright">Copyright 2024</p>
+                    <p className="copyright">Copyright 2025</p>
                     <p className="copyright">Все права защищены</p>
                 </div>
             </div>

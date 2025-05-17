@@ -2,13 +2,19 @@
   background-color: rgba(36, 36, 36, 0.8);
   border: none;
   border-radius: 40px;
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
+}
+
+.demeanor-item:hover {
+  border: none;
+  outline: 2px solid #69be31;
+  transition-duration: 0.1s;
 }
 
 .demeanor-title {
@@ -34,12 +40,6 @@
   font-size: 20px;
   line-height: auto;
   font-weight: 400;
-}
-
-.demeanor-item:hover {
-  border: none;
-  outline: 2px solid #69be31;
-  transition-duration: 0.2s;
 }
 
 .demeanor-img {

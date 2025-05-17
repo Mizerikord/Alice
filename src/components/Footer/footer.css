@@ -43,6 +43,12 @@
   line-height: auto;
   letter-spacing: 0;
   font-weight: 400;
+  transition-duration: 0.2s;
+}
+
+.footer-anchor:hover{
+  color: #69be31;
+  transition-duration: 0.2s;
 }
 
 .footer-service-btn {

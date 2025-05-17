@@ -29,7 +29,7 @@ function AboutMe() {
                 });
                 if(el.scrollLeft === 0 && e.deltaY < 0){
                     document.querySelector(".about-me").scrollIntoView({ behavior: "smooth", block: "start" });
-                } else if (el.scrollLeft === winWidth && e.deltaY > 0){
+                } else if (Math.round(el.scrollLeft) === winWidth && e.deltaY > 0){
                     document.querySelector(".help-you").scrollIntoView({ behavior: "smooth", block: "start" });
                 }
             };

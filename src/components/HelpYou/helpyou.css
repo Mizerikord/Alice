@@ -21,6 +21,7 @@
 .help-paw {
   width: 50%;
   position: absolute;
+  top: -5px;
   right: 100px;
 }
 
@@ -84,7 +85,7 @@
 .demeanor-monitor > .demeanor-img-animate {
   transform: translate(410px, 0);
   opacity: 1;
-  transition-duration: 3s;
+  transition-duration: 1.5s;
   transition-timing-function: ease;
 }
 

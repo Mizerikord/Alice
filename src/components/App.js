@@ -22,6 +22,7 @@ function App() {
   });
   const [scrollY, setScrollY] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isDown, setIsDown] = useState(false);
   let location = useLocation();
 
   useEffect(() => {
@@ -29,7 +30,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    return document.querySelector("#root").scrollIntoView({ block: "start" });
+    return document.querySelector(".page").scrollIntoView({ block: "start" });
   }, [isLoaded]);
 
   function sendCustomerData(data) {

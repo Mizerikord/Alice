@@ -1,6 +1,7 @@
 import React from 'react';
 import "./popup.css";
 import { useForm, Controller } from "react-hook-form";
+import { useState } from 'react';
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import { HashLink as Link } from 'react-router-hash-link';
 import 'react-phone-number-input/style.css';
@@ -19,13 +20,17 @@ function Popup(props) {
         },
     });
 
+    const [isName, setIsName] = useState();
+    const [isText, setIsText] = useState();
+
     function handleFormSubmit(data) {
-        props.onSend({
-            name: data.name,
-            phone: data.phone,
-            message: data.message,
-            communication: data.communication,
-        });
+
+        // props.onSend({
+        //     name: data.name,
+        //     phone: data.phone,
+        //     message: data.message,
+        //     communication: data.communication,
+        // });
     }
 
     const onSubmit = (data, e) => {
@@ -40,6 +45,21 @@ function Popup(props) {
         props.onClosePopup();
     }
 
+    function changeInputName(val) {
+        if (val.length > 1 && val.length < 31) {
+            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/.test(val)) {
+                setIsName(true);
+            }
+        }
+    }
+
+    function changeInputText(val) {
+        if (val.length > 1 && val.length < 31) {
+            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/.test(val)) {
+                setIsText(true);
+            }
+        }
+    }
 
     return (
         <div className="popup-cover popup-cover-disable">
@@ -51,9 +71,10 @@ function Popup(props) {
                 <form action="#" className="popup-container" onSubmit={handleSubmit(onSubmit)}>
                     <h2 className="popup-title">Оставьте заявку, и я свяжусь с вами для первого шага!</h2>
                     <div className="popup-data-container">
-                        <input type="text" className={`popup-user-data ${errors?.name ? "popup-user-data-error" : ""} ${errors?.name ? "":"popup-user-data-ok"}`} placeholder="Имя"
+                        <input type="text" className={`popup-user-data ${errors?.name ? "popup-user-data-error" : isName ? "popup-user-data-ok" : ""}`} placeholder="Имя"
                             {...register("name", {
                                 required: true,
+                                validate: (input) => changeInputName(input),
                                 pattern: {
                                     value: /^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/,
                                 },
@@ -71,24 +92,30 @@ function Popup(props) {
                             rules={{
                                 validate: (value) => {
                                     isValidPhoneNumber((value ?? 0).toString())
-                                }
+                                },
+                                required: true
                             }}
                             render={({ field: { onChange, value } }) => (
                                 <PhoneInput
+                                    className={`${isValidPhoneNumber((value ?? 0).toString()) ? "popup-user-data-ok" : "popup-user-data-error"}`}
+                                    required
                                     displayInitialValueAsLocalNumber
+                                    international
                                     value={value}
                                     onChange={onChange}
                                     defaultCountry="RU"
                                     limitMaxLength
                                     id="popup-phone"
+                                    rules={{ required: true }}
                                 />
                             )}
                         />
                     </div>
                     <div className="popup-callback-container">
-                        <textarea maxLength="300" type="text" className={`popup-textarea ${errors?.message && "popup-textarea-error"} ${errors?.message ? "": "popup-textarea-ok"}`} placeholder="Опишите вашу проблему"
+                        <textarea maxLength="300" type="text" className={`popup-textarea ${errors?.message ? "popup-textarea-error" : isText ? "popup-textarea-ok" : ""}`} placeholder="Опишите вашу проблему"
                             {...register("message", {
                                 required: true,
+                                validate: (input) => changeInputText(input),
                                 pattern: {
                                     value: /^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/,
                                 },
@@ -115,7 +142,7 @@ function Popup(props) {
                             </p>
                         </div>
                     </div>
-                    <button type="submit" className={`popup-submit-btn ${isValid ? "" : "popup-submit-btn-disable"}`} value="Отправить заявку" disabled={!isValid}>Отправить заявку</button>
+                    <button type="submit" className={`popup-submit-btn`} value="Отправить заявку" >Отправить заявку</button>
                     <p className="popup-commit" lang="ru">Нажимая кнопку “отправить заявку”, вы соглашаетесь с <Link to="#" className="popup-commit popup-commit-link">политикой конфиденциальности</Link>.</p>
                 </form>
             </div>

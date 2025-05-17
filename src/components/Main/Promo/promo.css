@@ -65,16 +65,16 @@
     font-size: 96px;
     line-height: 90%;
     letter-spacing: normal;
-    transition-duration: 1s;
+    transition-duration: 2s;
   }
 
   .main-to-bottom{
-    transition-duration: 1s;
+    transition-duration: 2s;
     margin-bottom: 250px;
   }
 
   .main-title-to-bottom{
-    transition-duration: 1s;
+    transition-duration: 2s;
     margin: 1000px 0 20px 0;
   }
   
@@ -101,7 +101,7 @@
 
   .main-subtitle-to-bottom {
     margin: 0 0 50px;
-    transition-duration: 0.5s;
+    transition-duration: 2s;
   }
   
   .main-subscribe-btn {
@@ -121,19 +121,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-duration: 1s;
+    transition-property: bottom, box-shadow;
+    transition-duration: 2s, 0.2s;
     z-index: 2;
     position: absolute;
     bottom: 249px;
   }
 
   .main-subscribe-btn-to-bottom {
+    transition-property: bottom;
+    transition-duration: 2s;
     bottom: -440px;
   }
 
   .main-subscribe-btn:hover {
+    transition-property: bottom, box-shadow;
     box-shadow: 0 0 20px #69be31;
-    transition-duration: 1s;
+    transition-duration: 2s, 0.2s;
   }
   
   .menu-burger {

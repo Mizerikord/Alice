@@ -46,6 +46,24 @@
   line-height: auto;
   letter-spacing: 0;
   font-weight: 400;
+  outline: none;
+}
+
+.form-message {
+  width: calc(100% - 40px);
+  padding: 20px;
+  background-color: rgba(246, 246, 246, 0.3);
+  border: none;
+  border-radius: 50px;
+  min-height: 132px;
+  color: #f6f6f6;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: auto;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-bottom: 30px;
+  outline: none;
 }
 
 .form-user-data-ok {
@@ -64,21 +82,7 @@
   line-height: auto;
   letter-spacing: 0;
   font-weight: 400;
-}
-.form-message {
-  width: calc(100% - 40px);
-  padding: 20px;
-  background-color: rgba(246, 246, 246, 0.3);
-  border: none;
-  border-radius: 50px;
-  min-height: 132px;
-  color: #f6f6f6;
-  font-family: "Manrope", Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  line-height: auto;
-  letter-spacing: 0;
-  font-weight: 400;
-  margin-bottom: 30px;
+  outline: none;
 }
 
 .form-callback-types-container {
@@ -216,7 +220,7 @@
     margin-bottom: 40px;
   }
 
-  .form-callback-type{
+  .form-callback-type {
     margin-right: 10px;
   }
 

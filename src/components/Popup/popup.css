@@ -26,6 +26,7 @@
     border-radius: 50px;
     border: 3px solid #69BE31;
     position: relative;
+    overflow: auto;
 }
 
 .popup-close{
@@ -87,18 +88,14 @@
 }
 
 .popup-user-data-error{
-    outline: 2px solid #DE1E1E;
+    outline: 2px solid #DE1E1E !important;
 }
 
 .popup-user-data-ok{
-    outline: 2px solid #4caf50;
+    outline: 2px solid #4caf50 !important;
 }
 
 .PhoneInput{
-    width: 70px;
-    height: 27px;
-    width: 230px;
-    height: 67px;
     border-radius: 100px;
     background-color: rgba(246, 246, 246, 0.3);
     border: none;
@@ -218,14 +215,6 @@
     border: none;
     outline: none;
     margin-bottom: 20px;
-}
-
-.popup-submit-btn-disable{
-    background-color: rgb(133, 133, 133)
-}
-
-.popup-submit-btn-disable:hover{
-    box-shadow: none;
 }
 
 .popup-submit-btn:hover{
