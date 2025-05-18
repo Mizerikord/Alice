@@ -76,7 +76,7 @@ function Article(props) {
         currentData.dataDay = props.isCard.dataDay
     }
     function openPopup(){
-        props.onMenu();
+        props.openPopup();
     }
 
     return (

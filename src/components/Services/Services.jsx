@@ -26,7 +26,7 @@ function Services(props) {
                                 <p className="offer-cost">3000  ₽  </p>
                             </div>
                         </div>
-                        <input className="sign-btn" defaultValue="Записаться" onClick={openPopup}/>
+                        <input type='button' className="sign-btn" defaultValue="Записаться" onClick={openPopup}/>
                     </li>
                     <li className="services-item">
                         <div className="offers">
@@ -42,7 +42,7 @@ function Services(props) {
                                 <p className="offer-cost">5000  ₽  </p>
                             </div>
                         </div>
-                        <input className="sign-btn" defaultValue="Записаться" onClick={openPopup}/>
+                        <input type='button' className="sign-btn" defaultValue="Записаться" onClick={openPopup}/>
                     </li>
                     <li className="services-item">
                         <div className="offers">
@@ -60,7 +60,7 @@ function Services(props) {
                             </div>
 
                         </div>
-                        <input className="sign-btn" defaultValue="Записаться" onClick={openPopup}/>
+                        <input type='button' className="sign-btn" defaultValue="Записаться" onClick={openPopup}/>
                     </li>
                 </ul>
             </div>

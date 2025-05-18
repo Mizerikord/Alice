@@ -34,7 +34,7 @@
   color: #f6f6f6;
 }
 .form-user-data {
-  width: 100%;
+  width: 100% !important;
   height: 67px;
   border-radius: 100px;
   background-color: rgba(246, 246, 246, 0.3);

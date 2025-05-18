@@ -24,13 +24,12 @@ function Popup(props) {
     const [isText, setIsText] = useState();
 
     function handleFormSubmit(data) {
-
-        // props.onSend({
-        //     name: data.name,
-        //     phone: data.phone,
-        //     message: data.message,
-        //     communication: data.communication,
-        // });
+        props.onSend({
+            name: data.name,
+            phone: data.phone,
+            message: data.message,
+            communication: data.communication,
+        });
     }
 
     const onSubmit = (data, e) => {
@@ -43,22 +42,26 @@ function Popup(props) {
         document.querySelector(".PhoneInputInput").value = "";
         document.querySelector(".popup-textarea").value = "";
         props.onClosePopup();
+        setIsName();
+        setIsText();
     }
 
     function changeInputName(val) {
         if (val.length > 1 && val.length < 31) {
             if (/^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/.test(val)) {
-                setIsName(true);
+                return setIsName(true);
             }
         }
+        return
     }
 
     function changeInputText(val) {
         if (val.length > 1 && val.length < 31) {
             if (/^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/.test(val)) {
-                setIsText(true);
+                return setIsText(true);
             }
         }
+        return
     }
 
     return (
@@ -97,7 +100,7 @@ function Popup(props) {
                             }}
                             render={({ field: { onChange, value } }) => (
                                 <PhoneInput
-                                    className={`${isValidPhoneNumber((value ?? 0).toString()) ? "popup-user-data-ok" : "popup-user-data-error"}`}
+                                    className={`popup-user-data ${isValidPhoneNumber((value ?? 0).toString()) ? "popup-user-data-ok" : "popup-user-data-error"}`}
                                     required
                                     displayInitialValueAsLocalNumber
                                     international
