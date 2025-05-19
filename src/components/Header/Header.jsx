@@ -50,7 +50,7 @@ function Header(props) {
                                     <li className="header-callback-item">
                                         <Link to="" target='_blanc'><img src={email} alt="" className="header-callback-img" /></Link></li>
                                 </ul>
-                                <p className="header-copyright">Copyright 2024<br />
+                                <p className="header-copyright">Copyright 2025<br />
                                     Все права защищены</p>
                             </div>
                         </div>

@@ -145,7 +145,7 @@ function Popup(props) {
                             </p>
                         </div>
                     </div>
-                    <button type="submit" className={`popup-submit-btn`} value="Отправить заявку" >Отправить заявку</button>
+                    <button type="submit" className={`popup-submit-btn`} value="Отправить заявку"  disabled={!isValid}>Отправить заявку</button>
                     <p className="popup-commit" lang="ru">Нажимая кнопку “отправить заявку”, вы соглашаетесь с <Link to="#" className="popup-commit popup-commit-link">политикой конфиденциальности</Link>.</p>
                 </form>
             </div>
