@@ -51,6 +51,7 @@
   flex-direction: column;
   align-items: flex-end;
   width: 600px;
+  height: 288px;
   border: none;
   border-radius: 50px;
   outline: 3px solid #69be31;
@@ -67,7 +68,7 @@
   font-size: 24px;
   text-align: right;
   margin: 30px;
-  width: 60%;
+  width: 90%;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
   font-size: 24px;
   line-height: auto;
@@ -181,6 +182,7 @@
 
   .demeanor-monitor {
     width: 325px;
+    height: 224px;
     outline: none;
     display: flex;
     flex-direction: column;
