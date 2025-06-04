@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 function HelpYou() {
     const cards = HelpCardData;
 
-    const [isCount, setCount] = useState(0);
+    const [isCount, setCount] = useState(1);
 
     function changeCard(id) {
         const monitorCard = document.querySelector(".demeanor-monitor");
@@ -19,8 +19,8 @@ function HelpYou() {
         document.querySelector(".demeanor-item-slider").textContent = currentCard.title;
         monitorCard.querySelector(".demeanor-text").textContent = currentCard.text;
         monitorCard.id = id;
-        setCount(id);
-        document.querySelector(".demeanor-range-position").textContent = `${id} / ${cards.length - 1}`
+        setCount(id+1);
+        document.querySelector(".demeanor-range-position").textContent = `${id+1} / ${cards.length}`
     }
 
     function clickSlider(e) {
@@ -76,7 +76,7 @@ function HelpYou() {
                     })}
                 </ul>
                 <div className="demeanor-range">
-                    <p className="demeanor-range-position">{`${0} / ${cards.length - 1}`}</p>
+                    <p className="demeanor-range-position">{`${1} / ${cards.length}`}</p>
                     <div className="demeanor-range-line">
                         <div className="demeanor-range-line-position"></div>
                     </div>

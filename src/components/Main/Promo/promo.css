@@ -207,8 +207,8 @@
     }
   
     .main-subscribe-btn {
-      position: relative;
-      margin: auto;
+      position: static;
+      margin: 0;
       width: 387px;
       height: 73px;
       border-radius: 100px;
@@ -221,6 +221,11 @@
       border: none;
       color: #111111;
       padding: auto 32px;
+    }
+
+    .promo-image{
+      bottom: 59px;
+      width: 1022px;
     }
   }
   
@@ -262,12 +267,18 @@
     .main-subscribe-btn {
       width: 325px;
       height: 62px;
+      margin: 0;
       border-radius: 100px;
       background-color: #69be31;
       font-weight: 400;
       font-size: 16px;
       letter-spacing: -2%;
       padding: auto 32px;
+    }
+
+    .promo-image{
+      bottom: 0px;
+      width: 1022px;
     }
   }
   

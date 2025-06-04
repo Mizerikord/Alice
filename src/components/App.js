@@ -197,7 +197,7 @@ function App() {
     <div className="page">
       <Routes>
         <Route
-          path="*"
+          path="/"
           element={
             <Main
               onMenu={handleMenuOpen}

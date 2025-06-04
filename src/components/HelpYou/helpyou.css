@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 
-.title-container{
+.title-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -131,7 +131,7 @@
     width: 100%;
   }
 
-  .help-paw{
+  .help-paw {
     width: 70%;
   }
 
@@ -205,8 +205,8 @@
   }
 
   .demeanor-monitor > .demeanor-img-animate {
-  transform: none;
-}
+    transform: none;
+  }
 
   .demeanor-monitor > .demeanor-text {
     display: block;
@@ -297,5 +297,9 @@
   .demeanor-range-line-position {
     height: 9px;
     background-color: #69be31;
+  }
+
+  .demeanor-range-position {
+    font-size: 18px;
   }
 }

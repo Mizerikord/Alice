@@ -22,6 +22,7 @@ function Popup(props) {
 
     const [isName, setIsName] = useState();
     const [isText, setIsText] = useState();
+    const [isValidNumber, setIsValidNumber] = useState("");
 
     function handleFormSubmit(data) {
         props.onSend({
@@ -94,13 +95,14 @@ function Popup(props) {
                             control={control}
                             rules={{
                                 validate: (value) => {
-                                    isValidPhoneNumber((value ?? 0).toString())
+                                    setIsValidNumber(isValidPhoneNumber((value ?? 0).toString()));
+                                    isValidPhoneNumber((value ?? 0).toString());
                                 },
-                                required: true
+                                required: true,
                             }}
                             render={({ field: { onChange, value } }) => (
                                 <PhoneInput
-                                    className={`popup-user-data ${isValidPhoneNumber((value ?? 0).toString()) ? "popup-user-data-ok" : "popup-user-data-error"}`}
+                                    className={`popup-user-data ${isValidNumber === "" ? "" : isValidNumber ? "popup-user-data-ok" : "popup-user-data-error"}`}
                                     required
                                     displayInitialValueAsLocalNumber
                                     international
@@ -145,7 +147,7 @@ function Popup(props) {
                             </p>
                         </div>
                     </div>
-                    <button type="submit" className={`popup-submit-btn`} value="Отправить заявку"  disabled={!isValid}>Отправить заявку</button>
+                    <button type="submit" className={`popup-submit-btn`} value="Отправить заявку" disabled={!isValid}>Отправить заявку</button>
                     <p className="popup-commit" lang="ru">Нажимая кнопку “отправить заявку”, вы соглашаетесь с <Link to="#" className="popup-commit popup-commit-link">политикой конфиденциальности</Link>.</p>
                 </form>
             </div>
