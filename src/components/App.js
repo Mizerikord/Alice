@@ -1,7 +1,13 @@
 import React from "react";
 import "./App.css";
 import Main from "./Main/Main";
-import { Route, Routes, useNavigate, Navigate, useLocation } from "react-router-dom";
+import {
+  Route,
+  Routes,
+  useNavigate,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
 import Article from "./Article/Article";
 import WebLog from "./WebLog/WebLog";
 import blogCards from "../utils/blog-cards";
@@ -211,9 +217,7 @@ function App() {
           }
         />
         <Route path="/blog" element={<WebLog onMenu={handleMenuOpen} />} />
-        <Route
-          path="/article"
-          element={
+        <Route path="/article" element={
             <Article
               isCard={isCurrentCard}
               cards={blogCards}
@@ -222,7 +226,9 @@ function App() {
             />
           }
         />
-        <Route path="*" element={<ErrorPage onMenu={handleMenuOpen} navigate={navigate} />} />
+        <Route
+          path="*" element={<ErrorPage onMenu={handleMenuOpen} navigate={navigate} />}
+        />
       </Routes>
       <Footer openPopup={openPopup} />
       <Popup onSend={sendCustomerData} onClosePopup={closePopup} />
