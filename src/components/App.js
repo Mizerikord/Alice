@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Main from "./Main/Main";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useNavigate, Navigate, useLocation } from "react-router-dom";
 import Article from "./Article/Article";
 import WebLog from "./WebLog/WebLog";
 import blogCards from "../utils/blog-cards";
@@ -23,6 +23,8 @@ function App() {
   const [scrollY, setScrollY] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isDown, setIsDown] = useState(false);
+
+  const navigate = useNavigate();
   let location = useLocation();
 
   useEffect(() => {
@@ -208,9 +210,9 @@ function App() {
             />
           }
         />
-        <Route path="/blog/*" element={<WebLog onMenu={handleMenuOpen} />} />
+        <Route path="/blog" element={<WebLog onMenu={handleMenuOpen} />} />
         <Route
-          path="/article/*"
+          path="/article"
           element={
             <Article
               isCard={isCurrentCard}
@@ -220,7 +222,7 @@ function App() {
             />
           }
         />
-        <Route path="*" element={<ErrorPage onMenu={handleMenuOpen} />} />
+        <Route path="*" element={<ErrorPage onMenu={handleMenuOpen} navigate={navigate} />} />
       </Routes>
       <Footer openPopup={openPopup} />
       <Popup onSend={sendCustomerData} onClosePopup={closePopup} />
