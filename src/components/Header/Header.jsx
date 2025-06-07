@@ -12,6 +12,9 @@ function Header(props) {
     let location = useLocation();
 
     function handleCloseMenu(e) {
+        if(window.innerWidth > 1440){
+            return;
+        }
         props.onMenu(e.target);
     }
 
@@ -26,16 +29,16 @@ function Header(props) {
                     <header className="header">
                         <img src={closeImg} alt='Закрыть' className="header-close-img" onClick={handleCloseMenu} />
                         <ul className="nav-list">
-                            <li className="nav-item"><Link to="/#Promo" className={`nav-anchor ${location.pathname === "/" ? "nav-anchor-current" : ""}`}>Главная</Link></li>
-                            <li className="nav-item"><Link to="/#AboutMe" className="nav-anchor">Обо мне</Link></li>
-                            <li className="nav-item"><Link to="/#HelpYou" className="nav-anchor">Чем я могу помочь</Link></li>
-                            <li className="nav-item"><Link to="/#Services" className="nav-anchor">Услуги</Link></li>
-                            <li className="nav-item"><Link to="/#Stages" className="nav-anchor">Этапы работы</Link></li>
-                            <li className="nav-item"><Link to="/#Result" className="nav-anchor">Мои работы</Link></li>
+                            <li className="nav-item"><Link to="/#Promo" className={`nav-anchor ${location.pathname === "/" ? "nav-anchor-current" : ""}`} onClick={handleCloseMenu}>Главная</Link></li>
+                            <li className="nav-item"><Link to="/#AboutMe" className="nav-anchor" onClick={handleCloseMenu}>Обо мне</Link></li>
+                            <li className="nav-item"><Link to="/#HelpYou" className="nav-anchor" onClick={handleCloseMenu}>Чем я могу помочь</Link></li>
+                            <li className="nav-item"><Link to="/#Services" className="nav-anchor" onClick={handleCloseMenu}>Услуги</Link></li>
+                            <li className="nav-item"><Link to="/#Stages" className="nav-anchor" onClick={handleCloseMenu}>Этапы работы</Link></li>
+                            <li className="nav-item"><Link to="/#Result" className="nav-anchor" onClick={handleCloseMenu}>Мои работы</Link></li>
                             <li className="nav-item">
-                                <Link to="/blog" className={`nav-anchor ${location.pathname === "/blog" ? "nav-anchor-current" : ""}`}>Блог</Link></li>
-                            <li className="nav-item"><Link to="/#Contacts" className="nav-anchor">Контакты</Link></li>
-                            <li className="nav-item-footer"><Link to="/#Footer" className="nav-anchor">Политика конфиденциальности</Link></li>
+                                <Link to="/blog" className={`nav-anchor ${location.pathname === "/blog" ? "nav-anchor-current" : ""}`} onClick={handleCloseMenu}>Блог</Link></li>
+                            <li className="nav-item"><Link to="/#Contacts" className="nav-anchor" onClick={handleCloseMenu}>Контакты</Link></li>
+                            <li className="nav-item-footer"><Link to="/#Footer" className="nav-anchor" onClick={handleCloseMenu}>Политика конфиденциальности</Link></li>
                         </ul>
                         <div className="header-callback-container">
                             <input type='button' className="header-callback-btn" value="Записаться" onClick={handlePopupOpen} />

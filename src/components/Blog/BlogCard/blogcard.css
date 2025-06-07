@@ -1,4 +1,4 @@
-.blog-card-item{
+.blog-card-item {
   width: 100%;
 }
 
@@ -13,33 +13,31 @@
   border-radius: 50px;
   margin-bottom: 30px;
   overflow: hidden;
-  overflow-y: auto;
   position: relative;
-}
-
-.blog-card::-webkit-scrollbar {
-  display: none;
 }
 
 .blog-data-container {
   border-radius: 50px;
   min-height: 141px;
+  height: 100%;
   width: 100%;
   background-color: rgba(36, 36, 36, 0.8);
   position: absolute;
+  top: 326px;
   left: 0;
   right: 0;
-  bottom: 0;
   transition-duration: 0.5s;
 }
 
-.blog-card:hover>.blog-data-container>.blog-card-text{
+.blog-card:hover > .blog-data-container > .blog-card-text {
   transition-duration: 0.5s;
   opacity: 1;
+  display: block;
+  overflow-y: scroll;
 }
-.blog-card:hover>.blog-data-container{
+.blog-card:hover > .blog-data-container {
   border-radius: 50px;
-  min-height: 100%;
+  height: auto;
   width: 100%;
   background-color: rgba(36, 36, 36, 0.8);
   position: absolute;
@@ -62,6 +60,7 @@
 }
 
 .blog-card-text {
+  height: 80%;
   margin: 0 20px;
   color: #f6f6f6;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
@@ -69,13 +68,13 @@
   line-height: 1.5em;
   letter-spacing: 0;
   font-weight: 400;
-  display: none;
   opacity: 0;
   transition-duration: 0.5s;
+  overflow-y: auto;
 }
 
-.blog-card-text-open{
-  display: block;
+.blog-card-text::-webkit-scrollbar {
+  display: none;
 }
 
 .blog-card-btn {
@@ -132,14 +131,22 @@
 @media screen and (max-width: 833px) {
   .blog-card {
     height: 291px;
+    transition-duration: 0.5s;
+    border-radius: 40px;
   }
 
   .blog-data-container {
+    border-radius: 40px !important;
     min-height: 152px;
+    top: 163px;
   }
 
   .blog-card-title {
     width: 152px;
+  }
+
+  .blog-card-text {
+    height: 65%;
   }
 
   .blog-card-btn {
@@ -147,21 +154,11 @@
     width: 152px;
     text-align: center;
   }
-}
 
-.blog-card-full{
-  background-image: url(../../../media/bgi-card-mobile.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.blog-data-container-full{
-  /* border-radius: 50px;
-  min-height: 100%;
-  width: 100%;
-  background-color: rgba(36, 36, 36, 0.8);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; */
+  .blog-card-full {
+    background-image: url(../../../media/bgi-card-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition-duration: 0.5s;
+  }
 }

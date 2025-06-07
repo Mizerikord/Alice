@@ -1,14 +1,24 @@
 import result1 from "../media/result-cards/result_1.png";
+import result11 from "../media/result-cards/result_11.mp4";
 import result2 from "../media/result-cards/result_2.png";
+import result22 from "../media/result-cards/result_22.mp4";
+import result23 from "../media/result-cards/result_23.mp4";
+import result24 from "../media/result-cards/result_24.jpg";
 import result3 from "../media/result-cards/result_3.png";
+import result31 from "../media/result-cards/result_31.mp4";
 import result4 from "../media/result-cards/result_4.png";
-import result5 from "../media/result-cards/result_5.png";
+import result41 from "../media/result-cards/result_41.mp4";
+import result51 from "../media/result-cards/result_51.mp4";
+import result52 from "../media/result-cards/result_52.mp4";
 import result6 from "../media/result-cards/result_6.png";
-import result7 from "../media/result-cards/result_7.png";
+import result60 from "../media/result-cards/result_60.mp4";
+import result61 from "../media/result-cards/result_61.jpg";
+import result7 from "../media/result-cards/result_7.mp4";
+import result71 from "../media/result-cards/result_71.mp4";
 
 const resultCards = [
   {
-    resultUrl: [result1, result2],
+    resultUrl: [result11, result1],
     resultTitle: "Кошечка золотая шиншилла",
     resultText: [
       {
@@ -37,7 +47,7 @@ const resultCards = [
     _id: 1,
   },
   {
-    resultUrl: [result2],
+    resultUrl: [result22, result23, result2, result24],
     resultTitle: "Перезнакомство двух бенгальских котиков",
     resultText: [
       {
@@ -63,7 +73,7 @@ const resultCards = [
     _id: 2,
   },
   {
-    resultUrl: [result3],
+    resultUrl: [result31, result3],
     resultTitle: "Котенок каракала, 3.5 мес",
     resultText: [
       {
@@ -88,7 +98,7 @@ const resultCards = [
     _id: 3,
   },
   {
-    resultUrl: [result4],
+    resultUrl: [result4, result41],
     resultTitle: "Девочка, азиатский леопардовый кот",
     resultText: [
       {
@@ -111,7 +121,7 @@ const resultCards = [
     _id: 4,
   },
   {
-    resultUrl: [result5],
+    resultUrl: [result51, result52],
     resultTitle: "Кот саванна",
     resultText: [
       {
@@ -138,7 +148,7 @@ const resultCards = [
     _id: 5,
   },
   {
-    resultUrl: [result6],
+    resultUrl: [result60, result61, result6],
     resultTitle: "Кошка сфинкс",
     resultText: [
       {
@@ -169,7 +179,7 @@ const resultCards = [
     _id: 6,
   },
   {
-    resultUrl: [result7],
+    resultUrl: [result7, result71],
     resultTitle: "Кошка саванна, 1 год",
     resultText: [
       {

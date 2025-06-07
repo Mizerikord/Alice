@@ -21,7 +21,7 @@ function Ready(props) {
     });
 
     const [isName, setIsName] = useState();
-        const [isText, setIsText] = useState();
+    const [isText, setIsText] = useState();
 
 
     function handleFormSubmit(data) {
@@ -70,7 +70,7 @@ function Ready(props) {
             <h2 className="section-title ready-title">Готовы начать?<br />Первый шаг за вами!</h2>
             <form action="" className="ready-form" onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-user-data-container">
-                    <input type="text" maxLength="30" className={`form-user-data ${errors?.name ? "form-user-data-error" :  isName ? "form-user-data-ok" : ""}`} placeholder='Введите имя'
+                    <input type="text" maxLength="30" className={`form-user-data ${errors?.name ? "form-user-data-error" : isName ? "form-user-data-ok" : ""}`} placeholder='Введите имя'
                         {...register("name", {
                             required: true,
                             validate: (input) => changeInputName(input),
@@ -133,7 +133,7 @@ function Ready(props) {
                         <input type="radio" name="telegramm" value="telegramm" className="form-callback-type" {...register("communication")} />Написать в Телеграм
                     </label>
                 </div>
-                <button type="submit" className="form-submit-btn" >Отправить заявку</button>
+                <button type="submit" className="form-submit-btn" disabled={isValid}>Отправить заявку</button>
                 <p className="form-policy-text">Нажимая кнопку “отправить заявку”, вы соглашаетесь <Link href="#" className="form-policy-underline">с политикой конфиденциальности</Link>.</p>
             </form>
         </section>

@@ -42,7 +42,6 @@ function BlogCard(props) {
         const currentImgBlock = document.querySelector(".blog-card-full");
         if (e.target.closest(".blog-data-container-full") != null) {
             document.querySelector(".blog-data-container-full").classList.remove("blog-data-container-full");
-            document.querySelector(".blog-card-text-open").classList.remove("blog-card-text-open");
             if (currentImgBlock !== null) {
                 currentImgBlock.classList.remove("blog-card-full");
             }
@@ -50,14 +49,12 @@ function BlogCard(props) {
         }
         if (currentBlock == null) {
             e.target.closest(".blog-card").querySelector(".blog-data-container").classList.add("blog-data-container-full");
-            e.target.closest(".blog-card").querySelector(".blog-card-text").classList.add("blog-card-text-open");
             if (size < 834) {
                 e.target.closest(".blog-card").classList.add("blog-card-full");
             }
             return;
         } else {
             document.querySelector(".blog-data-container-full").classList.remove("blog-data-container-full");
-            document.querySelector(".blog-card-text-open").classList.remove("blog-card-text-open");
             if (currentImgBlock !== null) {
                 currentImgBlock.classList.remove("blog-card-full");
             }
@@ -65,7 +62,6 @@ function BlogCard(props) {
                 e.target.closest(".blog-card").classList.add("blog-card-full");
             }
             e.target.closest(".blog-card").querySelector(".blog-data-container").classList.add("blog-data-container-full");
-            e.target.closest(".blog-card").querySelector(".blog-card-text").classList.add("blog-card-text-open");
             return;
         }
     }

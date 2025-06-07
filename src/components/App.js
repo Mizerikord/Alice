@@ -5,7 +5,6 @@ import {
   Route,
   Routes,
   useNavigate,
-  Navigate,
   useLocation,
 } from "react-router-dom";
 import Article from "./Article/Article";
@@ -28,7 +27,6 @@ function App() {
   });
   const [scrollY, setScrollY] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isDown, setIsDown] = useState(false);
 
   const navigate = useNavigate();
   let location = useLocation();

@@ -64,6 +64,10 @@
   border: none;
 }
 
+.demeanor-item-current{
+  outline: 2px solid #69be31;
+}
+
 .demeanor-monitor > .demeanor-title {
   font-size: 24px;
   text-align: right;
@@ -86,7 +90,7 @@
 .demeanor-monitor > .demeanor-img-animate {
   transform: translate(410px, 0);
   opacity: 1;
-  transition-duration: 1.5s;
+  transition-duration: 0.8s;
   transition-timing-function: ease;
 }
 

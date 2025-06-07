@@ -101,10 +101,10 @@
   width: 50%;
   height: 73px;
   border-radius: 100px;
-  background-color: rgba(36, 36, 36, 0.8);
+  background-color: #69be31;
   border: none;
   outline: 2px solid #69be31;
-  color: #69be31;
+  color: #111111;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
   font-size: 24px;
   line-height: 1.5em;
@@ -115,10 +115,7 @@
 }
 
 .telegramm-subscribe:hover {
-  background-color: #69be31;
-  border: none;
-  outline: 2px solid #69be31;
-  color: #111111;
+  box-shadow: 0 0 20px #69be31;
   transition-duration: 0.2s;
 }
 

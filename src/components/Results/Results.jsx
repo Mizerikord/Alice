@@ -4,9 +4,10 @@ import ResultText from './ResultText/ResultText';
 import resultCards from '../../utils/result-cards';
 import { useState, useEffect } from 'react';
 
-function Results(props) {
+function Results() {
 
     const cardsData = resultCards;
+    const types = new Map([["jpg", "img"], ["bmp", "img"], ["png", "img"], ["gif", "img"], ["mp4", "video"], ["3gp", "video"]]);
     const [isCount, setCount] = useState(1);
     const [isTextCount, setTextCount] = useState(1);
     const [isImgCount, setImgCount] = useState(0);
@@ -16,17 +17,27 @@ function Results(props) {
         if (e.target.id === "left") {
             if (isCount < 2) {
                 return;
+            } else {
+                document.querySelector(".results-item").classList.add("results-item-animate");
+                setTimeout(() => {
+                    setImgCount(0);
+                    setCount(isCount - 1);
+                    document.querySelector(".results-item").classList.remove("results-item-animate");
+                }, 200);
+                return;
             }
-            setImgCount(0);
-            setCount(isCount - 1);
-            return;
         } else if (e.target.id === "right") {
             if (isCount >= cardsData.length) {
                 return;
+            } else {
+                document.querySelector(".results-item").classList.add("results-item-animate");
+                setTimeout(() => {
+                    setImgCount(0);
+                    setCount(isCount + 1);
+                    document.querySelector(".results-item").classList.remove("results-item-animate");
+                }, 200);
+                return;
             }
-            setImgCount(0);
-            setCount(isCount + 1);
-            return;
         }
     }
 
@@ -79,15 +90,26 @@ function Results(props) {
         if (e.target.id === "left") {
             if (isImgCount < 1) {
                 return;
+            } else {
+                document.querySelector(".result-img").classList.add("result-img-animate");
+                setTimeout(() => {
+                    setImgCount(isImgCount - 1);
+                    document.querySelector(".result-img").classList.remove("result-img-animate");
+                }, 200);
+                return;
             }
-            setImgCount(isImgCount - 1);
-            return;
         } else if (e.target.id === "right") {
             if (isImgCount >= cardsData[isCount - 1].resultUrl.length - 1) {
                 return;
+            } else {
+                document.querySelector(".result-img").classList.add("result-img-animate");
+                setTimeout(() => {
+                    setImgCount(isImgCount + 1);
+                    document.querySelector(".result-img").classList.remove("result-img-animate");
+                }, 200);
+                return;
             }
-            setImgCount(isImgCount + 1);
-            return;
+
         }
     }
 
@@ -118,7 +140,7 @@ function Results(props) {
                     <li className="results-item">
                         <div className="result-img-container">
                             <input id='left' type='button' className={`result-arrow result-left ${isImgCount !== 0 && "result-left-active"}`} onClick={handleImgCount} />
-                            <img className="result-img" id={isImgCount} src={cardsData[isCount - 1].resultUrl[isImgCount]} alt="Изображение кошки" />
+                            {types.get(cardsData[isCount - 1].resultUrl[isImgCount].split(".")[cardsData[isCount - 1].resultUrl[isImgCount].split(".").length - 1]) === "img" ? <img className="result-img" id={isImgCount} src={cardsData[isCount - 1].resultUrl[isImgCount]} alt="Изображение кошки" /> : <video autoPlay loop muted className="result-img" id={isImgCount} src={cardsData[isCount - 1].resultUrl[isImgCount]} alt="Изображение кошки" />}
                             <input id='right' type='button' className={`result-arrow result-right ${isImgCount !== cardsData[isCount - 1].resultUrl.length - 1 && "result-right-active"}`} onClick={handleImgCount} />
                         </div>
                         <div className="result-paragraph-container">

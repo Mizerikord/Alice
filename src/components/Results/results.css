@@ -23,6 +23,7 @@
 
 .results-list {
   width: 100%;
+  height: 704px;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -108,9 +109,14 @@
 
 .results-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
-  gap: 40px;
+}
+
+.results-item-animate {
+  opacity: 0;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 
 .result-img-container {
@@ -175,9 +181,36 @@
   position: absolute;
 }
 
+.result-img-animate {
+  opacity: 0;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
 .result-paragraph-container {
-  width: 600px;
+  width: 560px;
   margin: 0 0 20px 0;
+}
+
+.result-paragraph{
+  overflow-y: auto;
+  max-height: 612px;
+}
+
+.result-paragraph::-webkit-scrollbar {
+
+  width: 10px;
+  border-radius: 10px;
+}
+
+.result-paragraph::-webkit-scrollbar-thumb{
+  background-color: #69BE31;
+  border-radius: 10px;
+}
+
+.result-paragraph::-webkit-scrollbar-track {
+  background-color: rgba(36, 36, 36, 0.8);
+  border-radius: 10px;
 }
 
 .result-paragraph-title {
@@ -208,11 +241,13 @@
   }
 
   .results-slider {
+    flex-direction: column-reverse;
     max-width: 754px;
   }
 
   .results-list {
     gap: 0;
+    height: auto;
   }
 
   .results-position-container {
@@ -235,12 +270,13 @@
     justify-content: flex-start;
     align-items: center;
     gap: 0;
+    position: relative;
   }
 
   .result-img-container {
     width: 560px;
     height: 560px;
-    margin: 40px;
+    margin: 120px 40px 40px;
     position: relative;
     display: flex;
     align-items: center;
@@ -264,7 +300,18 @@
 
   .result-paragraph-container {
     width: 674px;
+    height: auto;
     margin: 0 0 40px 0;
+  }
+
+  .result-paragraph-title{
+    position: absolute;
+    top: 0;
+    width: 90%;
+  }
+
+  .result-paragraph{
+    max-height: fit-content;
   }
 }
 
@@ -282,6 +329,7 @@
       }
     
       .results-list {
+        height: auto;
         gap: 0;
       }
     
@@ -330,11 +378,6 @@
         transition-duration: 0.2s;
       }
     
-      .result-arrow:hover {
-        background-color: #69be31;
-        transition-duration: 0.2s;
-      }
-    
       .result-left {
         margin-left: 25px;
         background-position: 6px center;
@@ -353,7 +396,13 @@
     
       .result-paragraph-container {
         width: 325px;
+        height: auto;
         margin-bottom: 0;
+      }
+
+      .result-paragraph{
+        max-height: fit-content;
+        overflow-y: hidden;
       }
     
       .result-paragraph-title {
