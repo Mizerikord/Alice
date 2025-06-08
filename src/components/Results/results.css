@@ -108,14 +108,17 @@
 }
 
 .results-item {
+  opacity: 1;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
 }
 
 .results-item-animate {
   opacity: 0;
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   transition-timing-function: ease;
 }
 
@@ -179,6 +182,8 @@
   height: 560px;
   border-radius: 50px;
   position: absolute;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }
 
 .result-img-animate {

@@ -95,7 +95,7 @@ function Results() {
                 setTimeout(() => {
                     setImgCount(isImgCount - 1);
                     document.querySelector(".result-img").classList.remove("result-img-animate");
-                }, 200);
+                }, 500);
                 return;
             }
         } else if (e.target.id === "right") {
@@ -106,7 +106,7 @@ function Results() {
                 setTimeout(() => {
                     setImgCount(isImgCount + 1);
                     document.querySelector(".result-img").classList.remove("result-img-animate");
-                }, 200);
+                }, 500);
                 return;
             }
 
