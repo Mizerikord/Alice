@@ -87,9 +87,9 @@ function Article(props) {
                 <div className="article-main-container">
                     <div className="article-nav">
                         <p className="article-nav-sting">
-                            <Link to='/' className="article-link">Главная</Link>/
-                            <Link to='/blog' className="article-link">Блог</Link>/
-                            <Link to='/article' className="article-link article-link-current">Название статьи</Link>
+                            <Link to='/' className="article-link" target="_blank" rel="noopener noreferrer">Главная</Link>/
+                            <Link to='/blog' className="article-link" target="_blank" rel="noopener noreferrer">Блог</Link>/
+                            <Link to='/article' className="article-link article-link-current" target="_blank" rel="noopener noreferrer">Название статьи</Link>
                         </p>
                     </div>
                     <img src={currentData.blogUrl} alt="" className="article-img-container" />

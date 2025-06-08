@@ -18,15 +18,15 @@ function ErrorPage(props) {
             <div className="error-page-container">
                 <div className="article-nav-error">
                     <p className="article-nav-sting">
-                        <Link to='/' className="article-link">Главная</Link>/
-                        <Link to='/error' className="article-link article-link-current">Ошибка</Link>
+                        <Link to='/' className="article-link" target="_blanc" rel="noopener noreferrer">Главная</Link>/
+                        <Link to='/error' className="article-link article-link-current" target="_blanc" rel="noopener noreferrer">Ошибка</Link>
                     </p>
                 </div>
                 <div className="error-page-data">
                     <h2 className="error-page-title">Мяу! Кажется, эта страница сбежала</h2>
                     <img src={errorImg} alt="Ошибка" className="error-page-img" />
                     <p className="error-page-text">К сожалению, страница, которую вы ищете, не существует. Может быть, она была перемещена или удалена, или вы ввели неправильный адрес.   </p>
-                    <Link to='/' className="error-page-link">Вернуться на главную</Link>
+                    <Link to='/' className="error-page-link" target="_blanc" rel="noopener noreferrer">Вернуться на главную</Link>
                 </div>
             </div>
         </section>

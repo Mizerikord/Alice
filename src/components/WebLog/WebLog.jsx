@@ -18,8 +18,8 @@ function WebLog(props) {
                 <img src={menu} alt="" className="menu-burger" onClick={handleClick} />
                 <div className="weblog-nav">
                     <p className="weblog-nav-sting">
-                        <Link to='/' className="weblog-link">Главная</Link>/
-                        <Link to='/blog' className="weblog-link weblog-link-current">Блог</Link>
+                        <Link to='/' className="weblog-link" target='_blank' rel="noopener noreferrer">Главная</Link>/
+                        <Link to='/blog' className="weblog-link weblog-link-current" target='_blank' rel="noopener noreferrer">Блог</Link>
                     </p>
                 </div>
                 <div className="weblog-info-container">

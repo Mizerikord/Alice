@@ -74,7 +74,7 @@ function BlogCard(props) {
                     <p className="blog-card-text">{card.blogText[0]}</p>
                 </div>
             </div>
-            <Link to="/article" target="_blank" className="blog-card-btn" onClick={handleStateCurrentCard}>{currentText}</Link>
+            <Link to="/article" target="_blank" className="blog-card-btn" rel="noopener noreferrer" onClick={handleStateCurrentCard}>{currentText}</Link>
         </li>
     );
 }

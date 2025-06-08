@@ -15,19 +15,19 @@ function Contacts() {
             <div className="contacts-data-container">
                 <ul className="contact-links-list">
                     <li className="contact-links-item">
-                        <Link to="https://t.me/cosm_alison" target="_blanc" className="contact-link">
+                        <Link to="https://t.me/cosm_alison" target="_blanc" rel="noopener noreferrer" className="contact-link">
                             <p className="contact-text">@cosm_alison</p>
                             <img src={tlg} alt="Телеграм" className="contact-icon" />
                         </Link>
                     </li>
                     <li className="contact-links-item">
-                        <Link to="https://wa.me/79776480006" target="_blanc" className="contact-link">
+                        <Link to="https://wa.me/79776480006" target="_blanc" rel="noopener noreferrer" className="contact-link">
                             <p className="contact-text">+79776480006</p>
                             <img src={watsapp} alt="WatsApp" className="contact-icon" />
                         </Link>
                     </li>
                     <li className="contact-links-item">
-                        <Link to="mailto:info@darkfox.ru" target='_blanc' className="contact-link" onClick={(e) => {
+                        <Link to="mailto:info@darkfox.ru" target="_blanc" rel="noopener noreferrer" className="contact-link" onClick={(e) => {
                             window.location = "mailto:info@darkfox.ru";
                         }}>
                             <p className="contact-text">info@darkfox.ru</p>

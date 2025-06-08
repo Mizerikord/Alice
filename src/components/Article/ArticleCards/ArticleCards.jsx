@@ -88,7 +88,7 @@ function ArticleCards(props) {
                     <p className="article-data-card-text">{card.blogText[0]}</p>
                 </div>
             </div>
-            <Link to="/article" className="article-data-card-btn">{currentText}</Link>
+            <Link to="/article" className="article-data-card-btn" target="_blank" rel="noopener noreferrer">{currentText}</Link>
         </li>
     );
 }

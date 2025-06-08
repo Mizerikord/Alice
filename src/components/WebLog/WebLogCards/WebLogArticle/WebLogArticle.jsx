@@ -72,7 +72,7 @@ function WebLogArticle(props) {
                     <p className="weblog-card-text">{card.blogText[0]}</p>
                 </div>
             </div>
-            <Link to="/article" className="weblog-card-btn">{currentText}</Link>
+            <Link to="/article" className="weblog-card-btn" rel="noopener noreferrer">{currentText}</Link>
         </li>
     );
 }
