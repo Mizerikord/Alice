@@ -1,18 +1,18 @@
 class MainApi {
-    constructor({ baseUrl, headers }) {
-        this._addres = baseUrl;
+    constructor({ baseUrl }) {
+        this._address = baseUrl;
     }
 
     _getAnswer(res) {
-        if (res.status === 200) {
+        if (res.ok) {
             return res.json();
         }
-        return Promise.reject(`${res.status}`);
+        return Promise.reject(`Error: ${res.status} ${res.statusText}`);
     }
 
     // Отправка данных формы
     sendNote(customer) {
-        return fetch(`${this._addres}`, {
+        return fetch(this._address, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -23,12 +23,18 @@ class MainApi {
                 message: customer.message,
                 communication: customer.communication
             })
-        }).then(this._getAnswer)
+        })
+        .then(this._getAnswer)
+        .catch(err => {
+            console.error(`Failed to send note: ${err}`);
+            throw err;
+        });
     }
 }
 
+const BOT_API_URL = process.env.BOT_API_URL || "http://localhost:8001/";
 const mainApi = new MainApi({
-    baseUrl: 'http://localhost:3002/',
+    baseUrl: BOT_API_URL,
 });
 
-export default mainApi
+export default mainApi;
