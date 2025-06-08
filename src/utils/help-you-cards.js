@@ -9,7 +9,7 @@ import Img8 from "../media/helpyou-media/adoptation.png";
 import Img9 from "../media/helpyou-media/razr_pov.png";
 import Img10 from "../media/helpyou-media/exotic.png";
 import Img11 from "../media/helpyou-media/nechist_pov.png";
-// import Img12 from "../media/helpyou-media/compulsive.png";
+import Img12 from "../media/helpyou-media/compulsive.png";
 
 const helpyou = [
   {
@@ -45,7 +45,7 @@ const helpyou = [
   {
     text: "Навязчивые действия, хождение по кругу и другие поведенческие ритуалы.",
     title: "Компульсивные поведенческие расстройства",
-    imgUrl: Img5,
+    imgUrl: Img12,
     _id: 5,
   },
   {
