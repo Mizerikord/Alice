@@ -30,9 +30,29 @@
   min-height: 141px;
   width: 100%;
   border: none;
+  top: 326px;
   left: 0;
   right: 0;
   position: absolute;
+  transition-duration: 0.5s;
+}
+
+.weblog-article-container:hover > .weblog-img-container> .weblog-data-container > .weblog-card-text {
+  transition-duration: 0.5s;
+  opacity: 1;
+  overflow-y: scroll;
+}
+.weblog-article-container:hover > .weblog-data-container {
+  border-radius: 50px;
+  height: auto;
+  width: 100%;
+  background-color: rgba(36, 36, 36, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition-duration: 0.5s;
 }
 
 .weblog-card-title {
@@ -47,20 +67,21 @@
 }
 
 .weblog-card-text {
-  display: none;
+  height: 80%;
+  margin: 0 20px;
   color: #f6f6f6;
-  margin: 0 30px 30px;
   font-family: "Manrope", Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: auto;
+  font-size: 16px;
+  line-height: 1.5em;
   letter-spacing: 0;
   font-weight: 400;
-  height: 100%;
-  border: none;
+  opacity: 0;
+  transition-duration: 0.5s;
+  overflow-y: auto;
 }
 
-.weblog-card-text-open {
-  display: block;
+.weblog-card-text::-webkit-scrollbar {
+  display: none;
 }
 
 .weblog-card-btn {

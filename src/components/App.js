@@ -1,12 +1,7 @@
 import React from "react";
 import "./App.css";
 import Main from "./Main/Main";
-import {
-  Route,
-  Routes,
-  useNavigate,
-  useLocation,
-} from "react-router-dom";
+import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import Article from "./Article/Article";
 import WebLog from "./WebLog/WebLog";
 import blogCards from "../utils/blog-cards";
@@ -39,7 +34,7 @@ function App() {
     return document.querySelector(".page").scrollIntoView({ block: "start" });
   }, [isLoaded]);
 
-  function sendCustomerData(data) {
+  function sendCustomerData(data, isSource) {
     closePopup();
     openPopupsupmit();
     const date = new Date();
@@ -59,7 +54,7 @@ function App() {
     data.dateTime = now;
     MainApi.sendNote(data)
       .then((res) => {
-        clearUserData();
+        clearUserData(isSource);
         openPopupsupmit();
       })
       .catch((err) => {
@@ -73,14 +68,25 @@ function App() {
     return;
   }
 
-  function clearUserData() {
-    const inputs = document.querySelectorAll(".form-user-data");
-    const newInputs = Array.from(inputs);
-    newInputs.map((elem) => {
-      return (elem.value = "");
-    });
-    document.querySelector(".form-message").value = "";
-    return;
+  function clearUserData(isSource) {
+    if (isSource === "popup") {
+      const inputs = document.querySelectorAll(".popup-user-data");
+      const newInputs = Array.from(inputs);
+      newInputs.map((elem) => {
+        return (elem.value = "");
+      });
+      document.querySelector(".popup-textarea").value = "";
+      return;
+    } else if (isSource === "form") {
+      const inputs = document.querySelectorAll(".form-user-data");
+      const newInputs = Array.from(inputs);
+      newInputs.map((elem) => {
+        return (elem.value = "");
+      });
+      document.querySelector(".PhoneInputInput").value = "";
+      document.querySelector(".form-message").value = "";
+      return;
+    }
   }
 
   function escFunction(e) {
@@ -214,8 +220,13 @@ function App() {
             />
           }
         />
-        <Route path="/blog" element={<WebLog onMenu={handleMenuOpen} openPopup={openPopup}/>} />
-        <Route path="/article" element={
+        <Route
+          path="/blog"
+          element={<WebLog onMenu={handleMenuOpen} openPopup={openPopup} />}
+        />
+        <Route
+          path="/article"
+          element={
             <Article
               isCard={isCurrentCard}
               cards={blogCards}
@@ -225,7 +236,8 @@ function App() {
           }
         />
         <Route
-          path="*" element={<ErrorPage onMenu={handleMenuOpen} navigate={navigate} />}
+          path="*"
+          element={<ErrorPage onMenu={handleMenuOpen} navigate={navigate} />}
         />
       </Routes>
       <Footer openPopup={openPopup} />

@@ -24,18 +24,19 @@ function Popup(props) {
     const [isText, setIsText] = useState();
     const [isValidNumber, setIsValidNumber] = useState("");
 
-    function handleFormSubmit(data) {
+    function handleFormSubmit(data, isSource) {
         props.onSend({
             name: data.name,
             phone: data.phone,
             message: data.message,
             communication: data.communication,
-        });
+        }, isSource);
     }
 
     const onSubmit = (data, e) => {
+        const isSource = "popup";
         e.preventDefault();
-        return handleFormSubmit(data);
+        return handleFormSubmit(data, isSource);
     }
 
     function closePopup() {

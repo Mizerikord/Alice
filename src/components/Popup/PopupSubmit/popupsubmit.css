@@ -13,72 +13,94 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.popup-submit-disable{
-    display: none;
+.popup-submit-disable {
+  display: none;
 }
 
 .popup-submit-container {
-    width: 660px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #242424;
-    border-radius: 50px;
-    border: 3px solid #69BE31;
-    position: relative;
+  width: 660px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  border-radius: 50px;
+  border: 3px solid #69be31;
+  position: relative;
 }
 
-.popup-submit-box{
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.popup-submit-box {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.popup-submit-title{
-    width: 473px;
-    font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
-    font-size: 36px;
-    line-height: auto;
-    font-weight: 700;
-    color: #69BE31;
-    text-align: center;
-    margin: 0 0 30px 0;
+.popup-submit-title {
+  width: 473px;
+  font-family: "ArsenalSC", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: auto;
+  font-weight: 700;
+  color: #69be31;
+  text-align: center;
+  margin: 0 0 30px 0;
 }
 
-.popup-submit-subtitle{
-    font-family: "Manrope", Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    font-weight: 400;
-    color: #f6f6f6;
-    text-align: center;
-    margin: 0 0 50px 0;
+.popup-submit-subtitle {
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-weight: 400;
+  color: #f6f6f6;
+  text-align: center;
+  margin: 0 0 50px 0;
 }
 
-.popup-submit-link{
-width: 100%;
-height: 73px;
-border-radius: 100px;
-text-align: center;
-background-color: #69BE31;
-font-family: "Manrope", Arial, Helvetica, sans-serif;
-font-size: 24px;
-line-height: 100%;
-letter-spacing: 0%;
-font-weight: 400;
-color: #111111;
-transition-duration: 0.2s;
-border: none;
-margin-bottom: 20px;
-text-decoration: none;
-display: flex;
-align-items: center;
-justify-content: center;
+.popup-submit-link {
+  width: 100%;
+  height: 73px;
+  border-radius: 100px;
+  text-align: center;
+  background-color: #69be31;
+  font-family: "Manrope", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-weight: 400;
+  color: #111111;
+  transition-duration: 0.2s;
+  border: none;
+  margin-bottom: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.popup-submit-link:hover{
-transition-duration: 0.2s;
-box-shadow: 0 0 30px #69be31;
+.popup-submit-link:hover {
+  transition-duration: 0.2s;
+  box-shadow: 0 0 30px #69be31;
+}
+
+@media screen and (max-width: 833px) {
+  .popup-submit-container {
+    width: 320px;
+    border-radius: 40px;
+  }
+
+  .popup-submit-title {
+    width: 300px;
+    font-size: 26px;
+  }
+
+  .popup-submit-subtitle {
+    font-size: 16px;
+    line-height: 1.2em;
+  }
+
+  .popup-submit-link {
+    height: 68px;
+    font-size: 16px;
+  }
 }
