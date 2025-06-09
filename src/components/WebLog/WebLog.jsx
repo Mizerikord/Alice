@@ -14,7 +14,7 @@ function WebLog(props) {
     return (
         <>
             <section className="weblog" id='weblog'>
-                <Header onMenu={props.onMenu}/>
+                <Header onMenu={props.onMenu} openPopup={props.openPopup}/>
                 <img src={menu} alt="" className="menu-burger" onClick={handleClick} />
                 <div className="weblog-nav">
                     <p className="weblog-nav-sting">

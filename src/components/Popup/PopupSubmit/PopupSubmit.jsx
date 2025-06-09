@@ -18,7 +18,7 @@ function closePopup(){
                 <div className="popup-submit-box">
                     <h2 className="popup-submit-title">Спасибо за обращение!</h2>
                     <p className="popup-submit-subtitle">Ваша заявка принята, в скором времени я свяжусь с вами. Пока ждете, можете ознакомиться с полезными статьями в блоге.</p>
-                    <Link to={"/blog/*"} className="popup-submit-link" onClick={closePopup} target="_blank" rel="noopener noreferrer">Перейти в блог</Link>
+                    <Link to={"/blog"} className="popup-submit-link" onClick={closePopup} target="_blank" rel="noopener noreferrer">Перейти в блог</Link>
                 </div>
             </div>
         </div>

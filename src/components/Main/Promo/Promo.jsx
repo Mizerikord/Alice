@@ -8,7 +8,6 @@ import rock from "../../../media/камень.png";
 
 
 function Promo(props) {
-
     function handleClick(e) {
         props.onMenu(e.target);
     }

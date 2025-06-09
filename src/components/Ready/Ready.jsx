@@ -133,7 +133,7 @@ function Ready(props) {
                         <input type="radio" name="telegramm" value="telegramm" className="form-callback-type" {...register("communication")} />Написать в Телеграм
                     </label>
                 </div>
-                <button type="submit" className="form-submit-btn" disabled={isValid}>Отправить заявку</button>
+                <button type="submit" className="form-submit-btn" disabled={!isValid}>Отправить заявку</button>
                 <p className="form-policy-text">Нажимая кнопку “отправить заявку”, вы соглашаетесь <Link href="#" className="form-policy-underline" target='_blank' rel="noopener noreferrer">с политикой конфиденциальности</Link>.</p>
             </form>
         </section>

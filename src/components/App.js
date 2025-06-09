@@ -15,7 +15,7 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Footer from "./Footer/Footer";
 import Popup from "./Popup/Popup";
 import PopupSubmit from "./Popup/PopupSubmit/PopupSubmit";
-import Api from "../utils/Api";
+import MainApi from "../utils/Api.js";
 
 function App() {
   const [isCurrentCard, setCurrentCard] = useState({
@@ -56,8 +56,8 @@ function App() {
       );
     }
     let now = createDateAsUTC(date);
-    data.dateTeme = now;
-    Api.sendNote(data)
+    data.dateTime = now;
+    MainApi.sendNote(data)
       .then((res) => {
         clearUserData();
         openPopupsupmit();
@@ -214,7 +214,7 @@ function App() {
             />
           }
         />
-        <Route path="/blog" element={<WebLog onMenu={handleMenuOpen} />} />
+        <Route path="/blog" element={<WebLog onMenu={handleMenuOpen} openPopup={openPopup}/>} />
         <Route path="/article" element={
             <Article
               isCard={isCurrentCard}

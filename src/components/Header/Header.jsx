@@ -8,7 +8,6 @@ import closeImg from "../../media/closeImg.png";
 import { useLocation } from 'react-router-dom';
 
 function Header(props) {
-
     let location = useLocation();
 
     function handleCloseMenu(e) {
@@ -18,8 +17,11 @@ function Header(props) {
         props.onMenu(e.target);
     }
 
-    function handlePopupOpen() {
-        props.openPopup();
+    function handlePopupOpen(e) {
+        if(e.target.classList.contains("header-callback-btn")){
+            props.onMenu(e.target);
+        }
+        return props.openPopup();
     }
 
     return (
@@ -41,7 +43,7 @@ function Header(props) {
                             <li className="nav-item-footer"><Link to="/#Footer" className="nav-anchor" onClick={handleCloseMenu} rel="noopener noreferrer">Политика конфиденциальности</Link></li>
                         </ul>
                         <div className="header-callback-container">
-                            <input type='button' className="header-callback-btn" value="Записаться" onClick={handlePopupOpen} />
+                            <input type='button' className="header-callback-btn" value="Записаться" onClick={handlePopupOpen}/>
                             <div className="header-link-container">
                                 <ul className="header-callback-links">
                                     <li className="header-callback-item">

@@ -22,7 +22,7 @@ function Main(props) {
             <Services openPopup={props.openPopup}/>
             <Stages />
             <Results />
-            <Blog onCard={props.onCard} />
+            <Blog onCard={props.onCard}/>
             <Ready onSend={props.onSend} />
             <Contacts />
         </>

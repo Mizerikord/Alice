@@ -5,14 +5,16 @@ class MainApi {
 
     _getAnswer(res) {
         if (res.ok) {
+            console.log(res);
+            
             return res.json();
         }
         return Promise.reject(`Error: ${res.status} ${res.statusText}`);
     }
 
     // Отправка данных формы
-    sendNote(customer) {
-        return fetch(this._address, {
+    async sendNote(customer) {
+        return fetch(`${this._address}`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -21,7 +23,8 @@ class MainApi {
                 name: customer.name,
                 phone: customer.phone,
                 message: customer.message,
-                communication: customer.communication
+                communication: customer.communication,
+                dateTime: customer.dateTime,
             })
         })
         .then(this._getAnswer)
