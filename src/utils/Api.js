@@ -33,7 +33,8 @@ class MainApi {
     }
 }
 
-const BOT_API_URL = process.env.BOT_API_URL || "http://localhost:8001/";
+const BOT_API_URL = process.env.BOT_API_URL || "http://localhost:3002/";
+// const BOT_API_URL = process.env.BOT_API_URL || "http://localhost:8001/";
 const mainApi = new MainApi({
     baseUrl: BOT_API_URL,
 });
