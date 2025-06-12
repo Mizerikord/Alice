@@ -24,19 +24,18 @@ function Popup(props) {
     const [isText, setIsText] = useState();
     const [isValidNumber, setIsValidNumber] = useState("");
 
-    function handleFormSubmit(data, isSource) {
+    function handleFormSubmit(data) {
         props.onSend({
             name: data.name,
             phone: data.phone,
             message: data.message,
             communication: data.communication,
-        }, isSource);
+        });
     }
 
     const onSubmit = (data, e) => {
-        const isSource = "popup";
         e.preventDefault();
-        return handleFormSubmit(data, isSource);
+        return handleFormSubmit(data);
     }
 
     function closePopup() {
@@ -59,11 +58,12 @@ function Popup(props) {
 
     function changeInputText(val) {
         if (val.length > 1 && val.length < 31) {
-            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/.test(val)) {
+            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/.test(val)) {
                 return setIsText(true);
             }
         }
         return
+    }
     }
 
     return (
@@ -81,7 +81,7 @@ function Popup(props) {
                                 required: true,
                                 validate: (input) => changeInputName(input),
                                 pattern: {
-                                    value: /^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/,
+                                    value: /^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/,
                                 },
                                 minLength: {
                                     value: 2,
@@ -123,7 +123,7 @@ function Popup(props) {
                                 required: true,
                                 validate: (input) => changeInputText(input),
                                 pattern: {
-                                    value: /^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/,
+                                    value: /^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/,
                                 },
                                 minLength: {
                                     value: 2,
@@ -148,8 +148,8 @@ function Popup(props) {
                             </p>
                         </div>
                     </div>
-                    <button type="submit" className={`popup-submit-btn`} value="Отправить заявку" disabled={!isValid === true || !isValidNumber === true}>Отправить заявку</button>
-                    <p className="popup-commit" lang="ru">Нажимая кнопку “отправить заявку”, вы соглашаетесь с <Link to="#" className="popup-commit popup-commit-link" rel="noopener noreferrer">политикой конфиденциальности</Link>.</p>
+                    <button type="submit" className={`popup-submit-btn`} value="Отправить заявку" disabled={!isValid}>Отправить заявку</button>
+                    <p className="popup-commit" lang="ru">Нажимая кнопку “отправить заявку”, вы соглашаетесь с <Link to="#" className="popup-commit popup-commit-link">политикой конфиденциальности</Link>.</p>
                 </form>
             </div>
         </div>
