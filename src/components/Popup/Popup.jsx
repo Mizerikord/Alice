@@ -50,7 +50,7 @@ function Popup(props) {
 
     function changeInputName(val) {
         if (val.length > 1 && val.length < 31) {
-            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/.test(val)) {
+            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/.test(val)) {
                 return setIsName(true);
             }
         }
@@ -59,7 +59,7 @@ function Popup(props) {
 
     function changeInputText(val) {
         if (val.length > 1 && val.length < 31) {
-            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/.test(val)) {
+            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/.test(val)) {
                 return setIsText(true);
             }
         }
@@ -81,7 +81,7 @@ function Popup(props) {
                                 required: true,
                                 validate: (input) => changeInputName(input),
                                 pattern: {
-                                    value: /^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/,
+                                    value: /^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/,
                                 },
                                 minLength: {
                                     value: 2,
@@ -123,7 +123,7 @@ function Popup(props) {
                                 required: true,
                                 validate: (input) => changeInputText(input),
                                 pattern: {
-                                    value: /^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/,
+                                    value: /^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/,
                                 },
                                 minLength: {
                                     value: 2,
