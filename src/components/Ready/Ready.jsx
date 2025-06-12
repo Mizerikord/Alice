@@ -52,7 +52,7 @@ function Ready(props) {
 
     function changeInputName(val) {
         if (val.length > 1 && val.length < 31) {
-            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/.test(val)) {
+            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/.test(val)) {
                 return setIsName(true);
             }
         }
@@ -61,7 +61,7 @@ function Ready(props) {
 
     function changeInputText(val) {
         if (val.length > 1 && val.length < 31) {
-            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/.test(val)) {
+            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/.test(val)) {
                 return setIsText(true);
             }
         }
@@ -78,7 +78,7 @@ function Ready(props) {
                             required: true,
                             validate: (input) => changeInputName(input),
                             pattern: {
-                                value: /^[0-9а-яА-ЯёЁa-zA-Z\- ]+$/,
+                                value: /^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/,
                             },
                             minLength: {
                                 value: 2,
