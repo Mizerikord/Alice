@@ -10,7 +10,6 @@ class MainApi {
         return Promise.reject(`Error: ${res.status} ${res.statusText}`);
     }
 
-    // Отправка данных формы
     async sendNote(customer) {
         return fetch(`${this._address}`, {
             method: 'POST',
@@ -33,8 +32,11 @@ class MainApi {
     }
 }
 
-const BOT_API_URL = process.env.BOT_API_URL || "http://localhost:3002/";
-// const BOT_API_URL = process.env.BOT_API_URL || "http://localhost:8001/";
+const test_env = process.env.REACT_APP_BOT_API_URL;
+console.log(`[Configuration] Using REACT_APP_BOT_API_URL from env: ${test_env}`);
+const BOT_API_URL = process.env.REACT_APP_BOT_API_URL || "http://localhost:8001/";
+console.log(`[Configuration] Using BOT_API_URL: ${BOT_API_URL}`);
+
 const mainApi = new MainApi({
     baseUrl: BOT_API_URL,
 });
