@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Main from "./Main/Main";
-import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
+import { Route, Routes, useNavigate, useLocation, } from "react-router-dom";
 import Article from "./Article/Article";
 import WebLog from "./WebLog/WebLog";
 import blogCards from "../utils/blog-cards";
@@ -209,6 +209,10 @@ function App() {
     <div className="page">
       <Routes>
         <Route
+          path="*"
+          element={<ErrorPage onMenu={handleMenuOpen} navigate={navigate} />}
+        />
+        <Route
           path="/"
           element={
             <Main
@@ -234,10 +238,6 @@ function App() {
               onMenu={handleMenuOpen}
             />
           }
-        />
-        <Route
-          path="*"
-          element={<ErrorPage onMenu={handleMenuOpen} navigate={navigate} />}
         />
       </Routes>
       <Footer openPopup={openPopup} />

@@ -48,22 +48,12 @@ function Popup(props) {
         setIsText();
     }
 
-    function changeInputName(val) {
-        if (val.length > 1 && val.length < 31) {
-            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/.test(val)) {
-                return setIsName(true);
-            }
-        }
-        return
+    function changeInputName() {
+        return setIsName(true);
     }
 
-    function changeInputText(val) {
-        if (val.length > 1 && val.length < 31) {
-            if (/^[0-9а-яА-ЯёЁa-zA-Z\- ,.!?;:"'@#$%^&*()_+=]+$/.test(val)) {
-                return setIsText(true);
-            }
-        }
-        return
+    function changeInputText() {
+        return setIsText(true);
     }
 
     return (
